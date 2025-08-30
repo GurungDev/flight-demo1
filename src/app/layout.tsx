@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Sidebar from '@/components/nav/Sidebar'
  
 export const metadata: Metadata = {
   title: 'Himalaya Jet - Book Flights, Hotels & Car Rentals',
@@ -24,10 +25,18 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans">
 
-        {children}
-      </body>
+          <body className="font-sans">
+            <div className='flex flex-1'>
+              <nav id='sideBar'>
+                <Sidebar/>
+              </nav>
+              <div className='w-full'>
+              {children}
+              </div>
+            </div>
+          </body>
+  
     </html>
   )
 }
