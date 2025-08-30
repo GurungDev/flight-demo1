@@ -10,6 +10,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx"
 import { useRef } from "react"
 import type { Swiper as SwiperCore } from 'swiper'
+import FlightSearchModal from "./FlightSearchModal"
+import { useState } from "react"
 
 const DestinationSection = () => {
     // Destinations data array matching the reference image
@@ -88,96 +90,94 @@ const DestinationSection = () => {
         },
     ]
     const swiperRef = useRef<SwiperCore | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="py-60 app-layout">
-            <div className="flex    items-center justify-between">
-                <div className="  text-white">
-                    <h1 className=" font-bold  ">
-                        Deals from
-                        <span className="text-blue-500"> Abu Dhabi</span>
-                    </h1>
-                    <p className="  text-gray-300">Let us inspire your next trip</p>
-                </div>
-                <div>
-                    <div className="group cursor-pointer inline-block">
-                        <span className="relative inline-block text-blue-500 text-center font-semibold">
-                            View all
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 ease-out group-hover:w-full"></span>
-                            <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 ease-out delay-150 group-hover:w-full"></span>
-                        </span>
+        <>
+            <div className=" pt-40 app-layout">
+                <div className="flex    items-center justify-between">
+                    <div className="  text-white">
+                        <h1 className=" font-bold  ">
+                            Deals from
+                            <span className="text-blue-500"> Abu Dhabi</span>
+                        </h1>
+                        <p className="  text-gray-300">Let us inspire your next trip</p>
+                    </div>
+                    <div>
+                        <div className="group cursor-pointer inline-block">
+                            <span className="relative inline-block text-blue-500 text-center font-semibold">
+                                View all
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 ease-out group-hover:w-full"></span>
+                                <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 ease-out delay-150 group-hover:w-full"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
+
+                {/* Swiper for Destination Cards */}
+                <div className="mt-16 relative      mx-auto">
+                    <Swiper
+                        effect={"coverflow"}
+                        grabCursor={false}
+                        centeredSlides={true}
+                        slidesPerView={2}
+                        initialSlide={2}
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        loop={true}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 200,
+                            modifier: 1.2,
+                            slideShadows: false,
+                        }}
+
+                        navigation={{
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        }}
+                        modules={[EffectCoverflow, Navigation]}
+                        className="destination-swiper"
+                        style={{ padding: "0px 0" }}
+                        speed={600}
+                    >
+                        {destinations.map((destination) => (
+                            <SwiperSlide key={destination.id}>
+                                <DestinationCard {...destination} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    {/* Custom Pagination */}
+                </div>
+
+                {/* Custom Navigation Arrows */}
+                <div className="flex justify-center space-x-4 mt-8">
+                    <button
+                        id={`swiper-button-prev`}
+                        className="border-white text-white p-3 flex justify-center items-center border-[0.7px] rounded-full duration-300 hover:bg-blue-600 backdrop-blur-sm transition-all"
+                        onClick={() => swiperRef.current?.slidePrev()}
+                    >
+                        <span className="text-2xl">
+                            <RxCaretLeft />
+                        </span>
+                    </button>
+
+                    <button
+                        id={`swiper-button-next`}
+                        className="border-white text-white p-3 flex justify-center items-center border-[0.7px] rounded-full duration-300 hover:bg-blue-600 backdrop-blur-sm transition-all"
+                        onClick={() => swiperRef.current?.slideNext()}
+                    >
+                        <span className="text-2xl">
+                            <RxCaretRight />
+                        </span>
+                    </button>
+                </div>
             </div>
 
-            {/* Swiper for Destination Cards */}
-            <div className="mt-16 relative      mx-auto">
-                <Swiper
-                    effect={"coverflow"}
-                    grabCursor={false}
-                    centeredSlides={true}
-                    slidesPerView={4}
-                    initialSlide={2}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    loop={true}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 200,
-                        modifier: 1.2,
-                        slideShadows: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                        el: ".swiper-pagination",
-                    }}
-                    navigation={{
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
-                    className="destination-swiper"
-                    style={{ padding: "0px 0" }}
-                    speed={1200}
-                >
-                    {destinations.map((destination) => (
-                        <SwiperSlide key={destination.id}>
-                            <DestinationCard {...destination} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+        </>
 
-                {/* Custom Pagination */}
-            </div>
-            {/* Custom Navigation Arrows */}
-            < div className="flex   space-x-2" >
-                <button
-                    id={`swiper-button-prev`}
-                    className={` 
-                            
-                      border-white text-white 
-                          p-2 flex 3xl:h-[7rem] 3xl:w-[7rem] justify-center items-center border-[0.7px] rounded-full duration-300 hover:bg-btn_color backdrop-blur-sm`}
-                    onClick={() => swiperRef.current?.slidePrev()} // Manually trigger previous slide
-                >
-                    <span className="flex text-black-300 active:text-black hover:text-white text-3xl 3xl:text-[8rem]" >
-                        <RxCaretLeft />
-                    </span>
-                </button>
 
-                < button
-                    id={`swiper-button-next`}
-                    className={`
-                        
-                            border-white text-white"
-                           p-2 3xl:h-[7rem] 3xl:w-[7rem] flex justify-center items-center border-[0.7px] rounded-full duration-300 hover:bg-btn_color text-white backdrop-blur-sm`}
-                    onClick={() => swiperRef.current?.slideNext()} // Manually trigger next slide
-                >
-                    <span className="flex justify-center text-white hover:text-white items-center text-3xl 3xl:text-[8rem]" >
-                        <RxCaretRight />
-                    </span>
-                </button>
-            </div>
-        </div>
     )
 }
 

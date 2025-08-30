@@ -3,6 +3,34 @@
   overflow: visible;
 }
 
+/* Ensure all images in sliders have proper coverage */
+.destination-swiper .swiper-slide img,
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Additional image coverage fixes for different image types */
+.destination-swiper .swiper-slide .image,
+.swiper-slide .image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Ensure image containers maintain aspect ratio */
+.destination-swiper .swiper-slide .image-container,
+.swiper-slide .image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .destination-swiper .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -167,4 +195,51 @@
 .destination-swiper .swiper-button-prev::after,
 .destination-swiper .swiper-button-next::after {
   display: none;
+}
+
+/* Pagination styling for all sliders */
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  opacity: 0.7 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: #3b82f6 !important;
+  transform: scale(1.2) !important;
+}
+
+/* Navigation button improvements */
+.destination-swiper .swiper-button-prev,
+.destination-swiper .swiper-button-next {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(26, 26, 26, 0.8) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.destination-swiper .swiper-button-prev:hover,
+.destination-swiper .swiper-button-next:hover {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4) !important;
 }

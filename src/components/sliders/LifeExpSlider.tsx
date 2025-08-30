@@ -11,17 +11,17 @@ import 'swiper/css/pagination';
 const SwiperComponent = () => {
   return (
 
-    <div className='w-full'>
-        <div className='flex flex-col space-y-3'>
-        <div id='title-LifeExp' className='flex flex-col space-y-3'>
-            <h1>Life’s better as a Guest</h1>
-            <span>
-            Discover the benefits of Etihad Guest
+    <div className='app-layout py-20'>
+        <div className='flex flex-col space-y-8'>
+        <div id='title-LifeExp' className='flex flex-col space-y-4 text-center'>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">Life's better as a Guest</h1>
+            <span className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Discover exclusive benefits, earn miles, and unlock premium experiences with Himalaya Jet Guest
             </span>
         </div>
         <div id='swiper-LifeExp' className='flex flex-row'>
  
-            <div className="swiper-container ">
+            <div className="swiper-container">
             <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={30}
@@ -29,6 +29,10 @@ const SwiperComponent = () => {
                 navigation={{
                 nextEl: '.Life-custom-next',
                 prevEl: '.Life-custom-prev',
+                }}
+                pagination={{
+                clickable: true,
+                el: '.swiper-pagination',
                 }}
                 breakpoints={{
                 320: {
@@ -75,14 +79,14 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip1.avif"
-                        alt="Serene Lounge"
+                        alt="Exclusive Lounges"
                         className="image"
                         priority
                     />
                     </div>
                     <div className="content">
-                    <h2>Serene Lounges</h2>
-                    <p>Discover</p>
+                    <h2>Exclusive Lounges</h2>
+                    <p>Access premium lounges worldwide</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -94,13 +98,13 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip2.avif"
-                        alt="Zayed International Airport"
-                        className="image"
+                        alt="Priority Boarding"
+                        className="image h-full w-full object-cover"
                     />
                     </div>
                     <div className="content">
-                    <h2>Zayed International Airport</h2>
-                    <p>Explore</p>
+                    <h2>Priority Boarding</h2>
+                    <p>Skip the queue, board first</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -112,13 +116,13 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip3.avif"
-                        alt="Experience Abu Dhabi"
-                        className="image"
+                        alt="Extra Baggage Allowance"
+                        className="image h-full w-full object-cover"
                     />
                     </div>
                     <div className="content">
-                    <h2>Experience Abu Dhabi</h2>
-                    <p>Learn more</p>
+                    <h2>Extra Baggage</h2>
+                    <p>More luggage, less worry</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -129,14 +133,14 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip1.avif"
-                        alt="Serene Lounge"
-                        className="image"
+                        alt="Miles Earning"
+                        className="image h-full w-full object-cover"
                         priority
                     />
                     </div>
                     <div className="content">
-                    <h2>Serene Lounges</h2>
-                    <p>Discover</p>
+                    <h2>Earn Miles</h2>
+                    <p>Every flight earns you rewards</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -148,13 +152,13 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip2.avif"
-                        alt="Zayed International Airport"
-                        className="image"
+                        alt="Special Offers"
+                        className="image h-full w-full object-cover"
                     />
                     </div>
                     <div className="content">
-                    <h2>Zayed International Airport</h2>
-                    <p>Explore</p>
+                    <h2>Special Offers</h2>
+                    <p>Member-only deals and discounts</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -166,13 +170,13 @@ const SwiperComponent = () => {
                         width={500}
                         height={400}
                         src="/swip3.avif"
-                        alt="Experience Abu Dhabi"
-                        className="image"
+                        alt="24/7 Support"
+                        className="image h-full w-full object-cover"
                     />
                     </div>
                     <div className="content">
-                    <h2>Experience Abu Dhabi</h2>
-                    <p>Learn more</p>
+                    <h2>24/7 Support</h2>
+                    <p>Dedicated guest assistance</p>
                     </div>
                 </div>
                 </SwiperSlide>
@@ -203,27 +207,37 @@ const SwiperComponent = () => {
                 position: relative;
                 border-radius: 16px;
                 overflow: hidden;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
                 height: 400px;
                 width: 100%;
                 max-width: 480px;
+                background: #1a1a1a;
+                border: 1px solid rgba(255, 255, 255, 0.1);
                 }
 
                 .card:hover {
                 transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                border-color: rgba(59, 130, 246, 0.5);
                 }
 
                 .image-container {
                 position: relative;
                 width: 100%;
                 height: 100%;
+                overflow: hidden;
                 }
 
                 .image {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: transform 0.3s ease;
+                }
+
+                .card:hover .image {
+                transform: scale(1.05);
                 }
 
                 .content {
@@ -231,21 +245,26 @@ const SwiperComponent = () => {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
                 color: white;
-                padding: 30px 15px 15px;
+                padding: 30px 20px 20px;
+                backdrop-filter: blur(10px);
                 }
 
                 .content h2 {
-                font-size: 20px;
+                font-size: 22px;
                 font-weight: bold;
-                margin: 0 0 6px 0;
+                margin: 0 0 8px 0;
+                color: #ffffff;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
                 }
 
                 .content p {
-                font-size: 14px;
+                font-size: 16px;
                 opacity: 0.9;
                 margin: 0;
+                color: #e5e7eb;
+                font-weight: 500;
                 }
 
                 /* Custom Swiper Styles */
@@ -259,18 +278,19 @@ const SwiperComponent = () => {
                 }
 
                 :global(.swiper-pagination-bullet) {
-                background-color: #fff !important;
+                background-color: rgba(255, 255, 255, 0.6) !important;
                 opacity: 0.7 !important;
-                transition: opacity 0.3s !important;
-                width: 10px !important;
-                height: 10px !important;
+                transition: all 0.3s !important;
+                width: 12px !important;
+                height: 12px !important;
                 border-radius: 50% !important;
-                margin: 0 4px !important;
+                margin: 0 6px !important;
                 }
 
                 :global(.swiper-pagination-bullet-active) {
                 opacity: 1 !important;
-                background-color: #f1c40f !important;
+                background-color: #3b82f6 !important;
+                transform: scale(1.2) !important;
                 }
 
                 /* Hide default Swiper navigation */
@@ -283,39 +303,40 @@ const SwiperComponent = () => {
                 .navigation-container {
                 display: flex;
                 justify-content: flex-end;
-                gap: 10px;
+                gap: 12px;
                 margin-top: 20px;
                 padding: 0 20px;
                 }
 
                 .navigation-btn {
-                width: 40px;
-                height: 40px;
+                width: 44px;
+                height: 44px;
                 border-radius: 50%;
-                border: 2px solid #ddd;
-                background-color: #fff;
-                color: #333;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                background-color: rgba(26, 26, 26, 0.8);
+                color: #ffffff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
                 }
 
                 .navigation-btn:hover:not(.disabled) {
-                border-color: #f1c40f;
-                background-color: #f1c40f;
-                color: #fff;
+                border-color: #3b82f6;
+                background-color: #3b82f6;
+                color: #ffffff;
                 transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
                 }
 
                 .navigation-btn.disabled {
                 opacity: 0.4;
                 cursor: not-allowed;
-                border-color: #ccc;
-                color: #999;
+                border-color: rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 0.3);
                 position: relative;
                 }
 
@@ -326,7 +347,7 @@ const SwiperComponent = () => {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 12px;
-                background: rgba(255, 255, 255, 0.9);
+                background: rgba(255, 255, 255, 0.1);
                 border-radius: 50%;
                 width: 18px;
                 height: 18px;
@@ -347,8 +368,8 @@ const SwiperComponent = () => {
                 }
 
                 .card {
-                    height: 280px;
-                    max-width: 220px;
+                    height: 320px;
+                    max-width: 280px;
                 }
 
                 .navigation-container {
@@ -357,13 +378,13 @@ const SwiperComponent = () => {
                 }
                 
                 .navigation-btn {
-                    width: 32px;
-                    height: 32px;
+                    width: 36px;
+                    height: 36px;
                 }
                 
                 .navigation-btn svg {
-                    width: 14px;
-                    height: 14px;
+                    width: 16px;
+                    height: 16px;
                 }
                 
                 .navigation-btn.disabled::after {
@@ -373,11 +394,11 @@ const SwiperComponent = () => {
                 }
 
                 .content h2 {
-                    font-size: 18px;
+                    font-size: 20px;
                 }
 
                 .content p {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 }
             `}</style>

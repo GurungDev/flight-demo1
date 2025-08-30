@@ -40,7 +40,7 @@
 
 @layer components {
   .app-layout {
-    @apply w-[90%] max-w-[1440px] mx-auto;
+    @apply w-[70%] max-w-[1440px] mx-auto;
   }
 }
 

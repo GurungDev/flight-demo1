@@ -12,13 +12,14 @@ interface DestinationCardProps {
 const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price, miles, image }) => {
   return (
     <div className="bg-white rounded-xl w-[500px] shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group">
-      <div className="h-[400px]  bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+      <div className="h-[400px] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
         {/* Background Image or Gradient */}
         {image ? (
           <img
             src={image}
             alt={`${city}, ${country}`}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            style={{ objectFit: 'cover' }}
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700"></div>

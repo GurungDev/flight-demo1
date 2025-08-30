@@ -2,16 +2,22 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import FlightSearchModal from "./FlightSearchModal";
 
 const HeroSection = () => {
   const [tripType, setTripType] = useState('round-trip');
   const [origin, setOrigin] = useState('KTM');
   const [destination, setDestination] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSwap = () => {
     const temp = origin;
     setOrigin(destination);
     setDestination(temp);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
   };
 
   return (
@@ -69,7 +75,10 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-4">
           {/* Origin Field */}
           <div className="flex-1 w-full bg-gray-100">
-            <div className=" border-2 border-gray-200 rounded-xl p-4 hover:border-blue-300 transition-colors">
+            <div 
+              className="border-2 border-gray-200 rounded-xl p-4 hover:border-blue-300 transition-colors cursor-pointer"
+              onClick={openModal}
+            >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -99,7 +108,10 @@ const HeroSection = () => {
 
           {/* Destination Field */}
           <div className="flex-1 w-full">
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-4 hover:border-blue-300 transition-colors bg-gray-100">
+            <div 
+              className="bg-white border-2 border-gray-200 rounded-xl p-4 hover:border-blue-300 transition-colors bg-gray-100 cursor-pointer"
+              onClick={openModal}
+            >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -122,6 +134,12 @@ const HeroSection = () => {
          
         </div>
       </div>
+      
+      {/* Flight Search Modal */}
+      <FlightSearchModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

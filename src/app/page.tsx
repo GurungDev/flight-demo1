@@ -8,7 +8,7 @@ import ExperienceSilder from '@/components/sliders/ExperienceSilder'
 export default function Home() {
 
   return (
-    <main className="  bg-white flex flex-col space-y-16 px-36">
+    <main className="  bg-gray-800 flex flex-col space-y-16  ">
        <HeroSection />
        <DestinationSection />
 
