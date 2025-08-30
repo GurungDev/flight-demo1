@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Etihad Airways Homepage Clone
+
+A modern, responsive clone of the Etihad Airways homepage built with Next.js 15, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🎨 **Modern Design**: Clean, professional airline website design
+- 📱 **Responsive Layout**: Mobile-first approach with responsive design
+- ✈️ **Flight Search**: Interactive flight booking form with validation
+- 🗺️ **Destination Showcase**: Popular destinations with pricing information
+- 🏆 **Feature Highlights**: Company benefits and services
+- 💰 **Special Offers**: Promotional content and deals
+- 🎯 **Interactive Elements**: Hover effects, transitions, and animations
+- 🔍 **Search Functionality**: Comprehensive flight search form
+- 📱 **Mobile Navigation**: Hamburger menu for mobile devices
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Fonts**: Google Fonts (Inter)
+- **Icons**: Emoji icons and SVG icons
+- **State Management**: React hooks (useState)
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and Tailwind imports
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main homepage component
+├── components/
+│   ├── Header.tsx           # Navigation header with mobile menu
+│   ├── FlightSearch.tsx     # Flight booking form
+│   ├── DestinationCard.tsx  # Destination display cards
+│   └── Footer.tsx           # Comprehensive footer with links
+```
+
+## Components
+
+### Header
+- Responsive navigation menu
+- Mobile hamburger menu
+- User authentication buttons
+- Etihad branding
+
+### FlightSearch
+- From/To destination inputs
+- Date selection (departure/return)
+- Passenger count and class selection
+- Form validation and state management
+
+### DestinationCard
+- Destination information display
+- Pricing information
+- Interactive hover effects
+- Book now buttons
+
+### Footer
+- Comprehensive link organization
+- Newsletter signup
+- Social media links
+- Legal information
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd demo1
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
+The design uses a blue color scheme that can be customized in `tailwind.config.js`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```javascript
+colors: {
+  blue: {
+    50: '#eff6ff',
+    100: '#dbeafe',
+    // ... customize as needed
+  }
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Content
+Update the content in the respective component files:
+- Destinations: `src/app/page.tsx` - `destinations` array
+- Features: `src/app/page.tsx` - `features` array
+- Offers: `src/app/page.tsx` - `offers` array
 
-## Deploy on Vercel
+### Styling
+Modify styles in:
+- `src/app/globals.css` - Global styles and custom utilities
+- Component files - Component-specific styles using Tailwind classes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The website is built with a mobile-first approach and includes:
+- Responsive grid layouts
+- Mobile navigation menu
+- Touch-friendly form inputs
+- Optimized spacing for different screen sizes
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Performance Features
+
+- Next.js 15 optimizations
+- Tailwind CSS purging
+- Optimized images and assets
+- Efficient component rendering
+
+## Future Enhancements
+
+- [ ] Add real flight search API integration
+- [ ] Implement user authentication
+- [ ] Add booking management system
+- [ ] Include real-time flight status
+- [ ] Add multi-language support
+- [ ] Implement PWA features
+- [ ] Add dark mode toggle
+- [ ] Include real destination images
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is for educational purposes only. All Etihad Airways branding and content is property of Etihad Airways.
+
+## Acknowledgments
+
+- Design inspired by [Etihad Airways](https://www.etihad.com)
+- Built with Next.js and Tailwind CSS
+- Icons from various sources (emoji, SVG)
