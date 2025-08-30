@@ -26,16 +26,22 @@ export default function RootLayout({
         />
       </head>
 
-          <body className="font-sans">
-            <div className='flex flex-1'>
-              <nav id='sideBar'>
-                <Sidebar/>
-              </nav>
-              <div className='w-full'>
-              {children}
-              </div>
-            </div>
-          </body>
+      <body className="font-sans">
+        <div className="flex">
+          {/* Sidebar fixed to the left */}
+          <nav
+            id="sideBar"
+            className="h-screen sticky top-0 left-0 z-50"
+          >
+            <Sidebar />
+          </nav>
+
+          {/* Main content scrolls independently */}
+          <main className="flex-1 overflow-y-auto">
+            {children}
+          </main>
+        </div>
+      </body>
   
     </html>
   )
