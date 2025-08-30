@@ -1,0 +1,170 @@
+/* Destination Swiper Custom Styles */
+.destination-swiper {
+  overflow: visible;
+}
+
+.destination-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.destination-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+/* Coverflow effect enhancements - Progressive scaling */
+.destination-swiper .swiper-slide-active {
+  transform: scale(1.5);
+  z-index: 5;
+}
+
+.destination-swiper .swiper-slide-prev,
+.destination-swiper .swiper-slide-next {
+  transform: scale(1.2);
+  opacity: 0.9;
+  z-index: 4;
+}
+
+.destination-swiper .swiper-slide-prev-prev,
+.destination-swiper .swiper-slide-next-next {
+  transform: scale(0.9);
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.destination-swiper .swiper-slide-prev-prev-prev,
+.destination-swiper .swiper-slide-next-next-next {
+  transform: scale(0.7);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.destination-swiper .swiper-slide-prev-prev-prev-prev,
+.destination-swiper .swiper-slide-next-next-next-next {
+  transform: scale(0.5);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Ensure slides are visible and overlapping */
+.destination-swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.destination-swiper .swiper-slide {
+  margin-right: -80px;
+}
+
+/* Custom pagination dots */
+.destination-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #6b7280;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.destination-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f59e0b;
+  transform: scale(1.2);
+}
+
+/* Navigation arrows - positioned at bottom */
+.destination-swiper .swiper-button-prev,
+.destination-swiper .swiper-button-next {
+  width: 60px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: hsl(210, 100%, 50%);
+  color: #fff;
+  margin: 0px 0.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  transition: all .5s;
+}
+
+.destination-swiper .swiper-button-prev {
+  left: calc(50% - 60px);
+}
+
+.destination-swiper .swiper-button-next {
+  left: calc(50% + 20px);
+}
+
+.destination-swiper .swiper-button-prev:hover,
+.destination-swiper .swiper-button-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.destination-swiper .swiper-button-prev::after,
+.destination-swiper .swiper-button-next::after {
+  font-size: 18px;
+}
+
+/* Smooth transitions */
+.destination-swiper .swiper-wrapper {
+  transition-timing-function: ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .destination-swiper .swiper-slide {
+    width: 280px;
+  }
+  
+  .destination-swiper {
+    padding: 30px 0;
+  }
+  
+  .destination-swiper .swiper-button-prev,
+  .destination-swiper .swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* Shared nav button styles */
+.custom-nav {
+  position: absolute;
+  bottom: -2rem; /* place near pagination */
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;  /* circle border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.custom-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.swiper-button-prev.custom-nav {
+  left: calc(50% - 100px); /* left of center */
+}
+
+.swiper-button-next.custom-nav {
+  left: calc(50% + 60px); /* right of center */
+}
+
+/* Hide default arrows */
+.destination-swiper .swiper-button-prev::after,
+.destination-swiper .swiper-button-next::after {
+  display: none;
+}
