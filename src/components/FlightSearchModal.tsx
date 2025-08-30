@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
-import { IoClose, IoLocation, IoAirplane, IoPeople, IoCalendar, IoCheckmarkCircle } from 'react-icons/io5'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { IoAirplane, IoCalendar, IoCheckmarkCircle, IoClose, IoLocation, IoPeople } from 'react-icons/io5'
 
 interface FlightSearchModalProps {
   isOpen: boolean
@@ -24,7 +24,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
   const steps = [
     { id: 1, title: 'Flying from', icon: IoLocation, completed: !!formData.flyingFrom },
     { id: 2, title: 'Flying to', icon: IoAirplane, completed: !!formData.flyingTo },
-    { id: 3, title: 'Who\'s traveling', icon: IoPeople, completed: formData.adults > 0 },
+    { id: 3, title: 'Who&apos;s traveling', icon: IoPeople, completed: formData.adults > 0 },
     { id: 4, title: 'Timetable', icon: IoCalendar, completed: !!formData.departureDate }
   ]
 
@@ -40,7 +40,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
     }
   }
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
@@ -150,7 +150,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
 
           {currentStep === 3 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">Who's traveling?</h3>
+              <h3 className="text-xl font-semibold text-gray-800">Who&apos;s traveling?</h3>
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <h4 className="font-medium text-gray-700">Passengers</h4>
@@ -166,14 +166,14 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                       </div>
                       <div className="flex items-center space-x-3">
                         <button
-                          onClick={() => handleInputChange(field, Math.max(min, formData[field as keyof typeof formData] - 1))}
+                          onClick={() => handleInputChange(field, Math.max(min, (formData[field as keyof typeof formData] as number) - 1))}
                           className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
                         >
                           -
                         </button>
                         <span className="w-8 text-center font-medium">{formData[field as keyof typeof formData]}</span>
                         <button
-                          onClick={() => handleInputChange(field, formData[field as keyof typeof formData] + 1)}
+                          onClick={() => handleInputChange(field, (formData[field as keyof typeof formData] as number) + 1)}
                           className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
                         >
                           +

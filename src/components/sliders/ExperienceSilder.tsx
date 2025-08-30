@@ -79,14 +79,14 @@ const SwiperComponent = () => {
                       width={500}
                       height={400}
                       src="/swip1.avif"
-                      alt="Serene Lounge"
+                      alt="Exclusive Lounges"
                       className="image h-full w-full object-cover"
                       priority
                     />
                   </div>
                   <div className="content">
-                    <h2>Serene Lounges</h2>
-                    <p>Discover</p>
+                    <h2>Exclusive Lounges</h2>
+                    <p>Access premium lounges worldwide</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -98,13 +98,13 @@ const SwiperComponent = () => {
                       width={500}
                       height={400}
                       src="/swip2.avif"
-                      alt="Zayed International Airport"
+                      alt="Priority Boarding"
                       className="image h-full w-full object-cover"
                     />
                   </div>
                   <div className="content">
-                    <h2>Zayed International Airport</h2>
-                    <p>Explore</p>
+                    <h2>Priority Boarding</h2>
+                    <p>Skip the queue, board first</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -115,15 +115,14 @@ const SwiperComponent = () => {
                     <Image
                       width={500}
                       height={400}
-
                       src="/swip3.avif"
-                      alt="Experience Abu Dhabi"
-                          className="image h-full w-full object-cover"
+                      alt="Extra Baggage Allowance"
+                      className="image h-full w-full object-cover   "
                     />
                   </div>
                   <div className="content">
-                    <h2>Experience Abu Dhabi</h2>
-                    <p>Learn more</p>
+                    <h2>Extra Baggage</h2>
+                    <p>More luggage, less worry</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -197,7 +196,6 @@ const SwiperComponent = () => {
                 background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
                 color: white;
                 padding: 30px 20px 20px;
-                backdrop-filter: blur(10px);
               }
 
               .content h2 {

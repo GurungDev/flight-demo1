@@ -13,10 +13,12 @@ const SwiperComponent = () => {
 
     <div className='app-layout py-20'>
         <div className='flex flex-col space-y-8'>
-        <div id='title-LifeExp' className='flex flex-col space-y-4 text-center'>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Life's better as a Guest</h1>
+        <div id='title-LifeExp' className='section-header'>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Life&apos;s better as a Guest
+            </h1>
             <span className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover exclusive benefits, earn miles, and unlock premium experiences with Himalaya Jet Guest
+                Discover exclusive benefits, earn miles, and unlock premium experiences with Himalaya Jet Guest
             </span>
         </div>
         <div id='swiper-LifeExp' className='flex flex-row'>
@@ -80,7 +82,7 @@ const SwiperComponent = () => {
                         height={400}
                         src="/swip1.avif"
                         alt="Exclusive Lounges"
-                        className="image"
+                        className="image h-full w-full object-cover"
                         priority
                     />
                     </div>
@@ -171,7 +173,7 @@ const SwiperComponent = () => {
                         height={400}
                         src="/swip3.avif"
                         alt="24/7 Support"
-                        className="image h-full w-full object-cover"
+                        className="image h-full w-full object-cover     "
                     />
                     </div>
                     <div className="content">
@@ -248,7 +250,6 @@ const SwiperComponent = () => {
                 background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
                 color: white;
                 padding: 30px 20px 20px;
-                backdrop-filter: blur(10px);
                 }
 
                 .content h2 {
