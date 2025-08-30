@@ -1,7 +1,8 @@
  
 import HeroSection from '@/components/HeroSection'
 import Footer from '../components/Footer'
-
+import DestinationSection from '@/components/DestinationSection'
+ 
 export default function Home() {
   const destinations = [
     { city: 'London', country: 'United Kingdom', price: 'From £299' },
@@ -55,8 +56,9 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="  bg-white">
        <HeroSection />
+       <DestinationSection />
 
       <Footer />
     </main>
