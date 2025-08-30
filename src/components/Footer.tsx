@@ -21,7 +21,7 @@ export default function Footer() {
       'In-flight dining',
       'Entertainment',
       'Wi-Fi on board',
-      'Etihad Guest',
+      'Himalaya Club',
       'Corporate travel'
     ],
     'Company': [
@@ -49,9 +49,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand section */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold text-blue-400 mb-4">Etihad</div>
+            <div className="text-2xl font-bold text-blue-400 mb-4">Himalaya Jet</div>
             <p className="text-gray-400 text-sm mb-6">
-              Experience luxury travel with Etihad Airways, connecting the world with exceptional service. 
+              Experience luxury travel with Himalaya Jet, connecting the world with exceptional service. 
               Discover our award-winning hospitality and extensive global network.
             </p>
             <div className="flex space-x-4">
@@ -112,7 +112,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              <p>&copy; 2024 Etihad Airways. All rights reserved.</p>
+              <p>&copy; 2024 Himalaya Jet. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

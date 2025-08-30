@@ -1,6 +1,6 @@
-# Etihad Airways Homepage Clone
+# Himalaya Jet Homepage Clone
 
-A modern, responsive clone of the Etihad Airways homepage built with Next.js 15, TypeScript, and Tailwind CSS.
+A modern, responsive clone of the Himalaya Jet homepage built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -18,7 +18,7 @@ A modern, responsive clone of the Etihad Airways homepage built with Next.js 15,
 
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
+- **Styling**: Tailwind CSS 3
 - **Fonts**: Google Fonts (Inter)
 - **Icons**: Emoji icons and SVG icons
 - **State Management**: React hooks (useState)
@@ -44,7 +44,7 @@ src/
 - Responsive navigation menu
 - Mobile hamburger menu
 - User authentication buttons
-- Etihad branding
+- Himalaya Jet branding
 
 ### FlightSearch
 - From/To destination inputs
@@ -170,10 +170,10 @@ The website is built with a mobile-first approach and includes:
 
 ## License
 
-This project is for educational purposes only. All Etihad Airways branding and content is property of Etihad Airways.
+This project is for educational purposes only. All Himalaya Jet branding and content is property of Himalaya Jet.
 
 ## Acknowledgments
 
-- Design inspired by [Etihad Airways](https://www.etihad.com)
+- Design inspired by modern airline websites
 - Built with Next.js and Tailwind CSS
 - Icons from various sources (emoji, SVG)

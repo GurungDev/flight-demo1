@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
-
+ 
 export const metadata: Metadata = {
-  title: 'Etihad Airways - Book Flights, Hotels & Car Rentals',
-  description: 'Book flights with Etihad Airways. Discover luxury travel with award-winning service to destinations worldwide. Join Etihad Guest for exclusive benefits.',
-  keywords: 'Etihad Airways, flights, travel, airline, luxury travel, Etihad Guest, book flights',
-  authors: [{ name: 'Etihad Airways' }],
+  title: 'Himalaya Jet - Book Flights, Hotels & Car Rentals',
+  description: 'Book flights with Himalaya Jet. Discover luxury travel with award-winning service to destinations worldwide. Join Himalaya Club for exclusive benefits.',
+  keywords: 'Himalaya Jet, flights, travel, airline, luxury travel, Himalaya Club, book flights',
+  authors: [{ name: 'Himalaya Jet' }],
   viewport: 'width=device-width, initial-scale=1',
 }
 
