@@ -90,16 +90,16 @@ export default function Footer() {
 
         {/* Newsletter signup */}
         <div className="border-t border-white/10 mt-8 pt-8">
-          <div className="max-w-md">
+          <div className="md:max-w-md">
             <h4 className="font-semibold mb-3 text-white">Stay updated</h4>
             <p className="text-sm text-gray-300 mb-4">
               Subscribe to our newsletter for exclusive offers and travel inspiration.
             </p>
-            <div className="flex">
+            <div className="flex space-x-2 md:space-x-0">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
               />
               <button className="btn-primary rounded-l-none">
                 Subscribe

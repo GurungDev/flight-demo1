@@ -27,11 +27,12 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans">
-        <div className="flex">
+        <div className="flex md:flex-row flex-col">
+
           {/* Sidebar fixed to the left */}
           <nav
             id="sideBar"
-            className="h-screen sticky top-0 left-0 z-50"
+            className="md:h-screen md:sticky md:top-0 md:left-0 md:z-50"
           >
             <Sidebar />
           </nav>
