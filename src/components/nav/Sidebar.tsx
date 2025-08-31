@@ -77,26 +77,22 @@ export default function Sidebar() {
 
       {/* Desktop Sidebar */}
       <div
-        className={`hidden md:flex relative h-screen glass border-r border-white/10 flex-col transition-all duration-500 ease-in-out ${
-          isExpanded ? "w-64" : "w-24"
-        }`}
+        className={`hidden md:flex relative h-screen glass border-r border-white/10 flex-col transition-all duration-500 ease-in-out ${isExpanded ? "w-64" : "w-24"
+          }`}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-800/30 to-slate-900/50 opacity-60"></div>
-        
+
         {/* Logo Section */}
-        <div className="relative z-10 flex items-center justify-center mt-6 mb-8">
+        <div className="relative z-10 flex items-center justify-center mt-6  ">
           <div className="glass-light p-3 rounded-2xl border border-white/20">
             {isExpanded ? (
               <div className="flex items-center space-x-3">
-                <Image src="/logo-big.png" alt="Logo" width={32} height={32} />
-                <div className="text-left">
-                  <div className="text-lg font-bold text-blue-400">Himalaya</div>
-                  <div className="text-xs text-gray-300">Jet</div>
-                </div>
+                <Image src="/small-himalaya-logo.png" alt="Logo" width={200} height={140} />
+
               </div>
             ) : (
-              <Image src="/logo-small.png" alt="Logo" width={32} height={32} />
+              <Image src="/small-himalaya-logo.png" alt="Logo" width={140} height={140} />
             )}
           </div>
         </div>
@@ -111,9 +107,8 @@ export default function Sidebar() {
               -right-4 transition-all duration-300 hover:scale-110 hover:border-blue-400/50"
           >
             <FaChevronRight
-              className={`transform transition-transform duration-300 text-white ${
-                isExpanded ? "rotate-180" : "rotate-0"
-              }`}
+              className={`transform transition-transform duration-300 text-white ${isExpanded ? "rotate-180" : "rotate-0"
+                }`}
             />
           </button>
         </div>
@@ -133,11 +128,10 @@ export default function Sidebar() {
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30 transition-all duration-300">
                   <span className="text-lg">{item.icon}</span>
                 </div>
-                
+
                 <div
-                  className={`ml-3 whitespace-nowrap overflow-hidden transition-all duration-300 ${
-                    isExpanded ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"
-                  }`}
+                  className={`ml-3 whitespace-nowrap overflow-hidden transition-all duration-300 ${isExpanded ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"
+                    }`}
                 >
                   <div className="text-white font-medium">{item.text}</div>
                   <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -151,14 +145,13 @@ export default function Sidebar() {
 
         {/* Bottom Section */}
         <div className="relative z-10 mt-auto mb-6 px-3">
-          <div className={`glass-light rounded-xl p-3 border border-white/20 transition-all duration-300 ${
-            isExpanded ? "opacity-100" : "opacity-0"
-          }`}>
+          <div className={`glass-light rounded-xl p-3 border border-white/20 transition-all duration-300 ${isExpanded ? "opacity-100" : "opacity-0"
+            }`}>
             <div className="text-center">
               <div className="text-sm font-medium text-white mb-2">Guest Status</div>
               <div className="text-xs text-gray-300">Silver Member</div>
               <div className="w-full bg-gray-600 rounded-full h-1.5 mt-2">
-                <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-1.5 rounded-full" style={{width: '65%'}}></div>
+                <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-1.5 rounded-full" style={{ width: '65%' }}></div>
               </div>
               <div className="text-xs text-gray-400 mt-1">65% to Gold</div>
             </div>
@@ -172,28 +165,24 @@ export default function Sidebar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-80 glass border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${
-          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-80 glass border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-800/30 to-slate-900/50 opacity-60"></div>
-        
+
         {/* Logo Section */}
-        <div className="relative z-10 flex items-center justify-center mt-20 mb-8">
+        <div className="relative  flex items-center justify-center mt-20 ">
           <div className="glass-light p-4 rounded-2xl border border-white/20">
-            <div className="flex items-center space-x-3">
-              <Image src="/logo-big.png" alt="Logo" width={40} height={40} />
-              <div className="text-left">
-                <div className="text-xl font-bold text-blue-400">Himalaya</div>
-                <div className="text-sm text-gray-300">Jet</div>
-              </div>
+            <div className="flex items-center  ">
+              <Image src="/small-himalaya-logo.png" alt="Logo" width={200} height={200} />
+            
             </div>
           </div>
         </div>
 
         {/* Menu Items */}
-        <ul className="relative z-10 space-y-2 mt-4 px-4 flex-1 overflow-y-auto">
+        <ul className="relative  space-y-2 mt-4 px-4 flex-1 overflow-y-auto">
           {menuItems.map((item, index) => (
             <li
               key={index}
@@ -204,7 +193,7 @@ export default function Sidebar() {
                 <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30 transition-all duration-300">
                   <span className="text-xl">{item.icon}</span>
                 </div>
-                
+
                 <div className="ml-4">
                   <div className="text-white font-medium text-lg">{item.text}</div>
                   <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -216,19 +205,7 @@ export default function Sidebar() {
           ))}
         </ul>
 
-        {/* Bottom Section */}
-        <div className="relative z-10 mb-6 px-4">
-          <div className="glass-light rounded-xl p-4 border border-white/20">
-            <div className="text-center">
-              <div className="text-base font-medium text-white mb-3">Guest Status</div>
-              <div className="text-sm text-gray-300 mb-3">Silver Member</div>
-              <div className="w-full bg-gray-600 rounded-full h-2">
-                <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style={{width: '65%'}}></div>
-              </div>
-              <div className="text-sm text-gray-400 mt-2">65% to Gold</div>
-            </div>
-          </div>
-        </div>
+     
 
         {/* Decorative Elements */}
         <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
