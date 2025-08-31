@@ -148,13 +148,13 @@ export default function Footer() {
             <p className="text-sm text-gray-300 mb-4">
               Subscribe to our newsletter for exclusive offers and travel inspiration.
             </p>
-            <div className="flex space-x-2 md:space-x-0">
+            <div className="flex ">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
               />
-              <button className="btn-primary rounded-l-none">
+              <button className="btn-subscribe rounded-r-md bg-amber-600 rounded-l-none">
                 Subscribe
               </button>
             </div>
