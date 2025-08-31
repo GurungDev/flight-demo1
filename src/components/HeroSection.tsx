@@ -24,30 +24,41 @@ const HeroSection = () => {
     <div className="relative h-[70vh] w-full">
       {/* Background Image */}
       <Image
-        src="/hero.png"
+        src="/hero2.png"
         alt="Hero Background"
         fill
         priority
+        quality={85}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         className="object-cover"
       />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/10"></div>
-   
+
       {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-end justify-center h-full text-center text-white px-4 w-[80%] m-auto">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          Welcome to Himalaya Jet
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg md:text-xl">
-          Experience luxury travel with Himalaya Jet, connecting the world with exceptional service.
-        </p>
-        <div className="mt-6 group cursor-pointer ">
-          <span className="relative inline-block px-6 py-3 font-semibold text-white">
-            Book your flight
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
-            <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out delay-150 group-hover:w-full"></span>
-          </span>
+      <div className="relative z-10 flex flex-col items-end justify-center h-full text-center text-white px-4 w-[80%] m-auto ">
+        <div className="space-y-6">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
+              Welcome to Himalaya Jet
+            </h1>
+          </div>
+          
+          <div>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+              Experience luxury travel with Himalaya Jet, connecting the world with exceptional service.
+            </p>
+          </div>
+          
+          <div className="group cursor-pointer">
+            <span className="relative inline-block px-8 py-4 font-semibold text-white text-lg hover:text-white/80 transition-colors duration-300">
+              Book your flight
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
+              <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out delay-150 group-hover:w-full"></span>
+            </span>
+          </div>
         </div>
       </div>
 
@@ -60,8 +71,8 @@ const HeroSection = () => {
               key={type}
               onClick={() => setTripType(type)}
               className={`flex-1 py-2 px-4 rounded-full text-sm font-medium transition-all ${tripType === type
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
             >
               {type === 'round-trip' ? 'Round trip' :

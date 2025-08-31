@@ -88,10 +88,26 @@ export default function Footer() {
     <footer className="glass border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main footer content */}
-        <div className="text-[8rem] font-bold text-blue-400 mb-4 text-center">Himalaya Jet</div>
+        <div className="text-center mb-16 py-16 px-8">
+          <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-bold bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg mb-6">
+            Himalaya Jet
+          </h2>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand section */}
           <div className="lg:col-span-2">
+            <Image 
+              src="/small-Himalaya-Logo.png" 
+              alt="Himalaya Jet" 
+              width={200} 
+              height={200} 
+              className="mb-6"
+              priority
+              quality={85}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxAAPwCdABmX/9k="
+            />
             <p className="text-gray-300 text-sm mb-6 leading-relaxed">
               Experience luxury travel with Himalaya Jet, connecting the world with exceptional service. 
               Discover our award-winning hospitality and extensive global network.
@@ -154,7 +170,7 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-300">
-              <p>&copy; 2024 Himalaya Jet. All rights reserved.</p>
+              <p>&copy; 2025 Himalaya Jet. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-300">
               <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>

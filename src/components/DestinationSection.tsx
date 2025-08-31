@@ -90,8 +90,8 @@ const DestinationSection = () => {
  
     return (
         <>
-            <div className="pt-20 app-layout">
-                <div className="section-header">
+            <div className=" app-layout">
+                <div className="section-header pt-20">
                     <h1 className="text-center mb-4">
                         Deals from
                         <span className="text-blue-400"> Abu Dhabi</span>

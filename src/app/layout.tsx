@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/nav/Sidebar'
- 
+import Image from 'next/image'
+
 export const metadata: Metadata = {
   title: 'Himalaya Jet - Book Flights, Hotels & Car Rentals',
   description: 'Book flights with Himalaya Jet. Discover luxury travel with award-winning service to destinations worldwide. Join Himalaya Club for exclusive benefits.',
@@ -36,14 +37,14 @@ export default function RootLayout({
           >
             <Sidebar />
           </nav>
-
+        
           {/* Main content scrolls independently */}
           <main className="flex-1 overflow-y-auto">
             {children}
           </main>
         </div>
       </body>
-  
+
     </html>
   )
 }

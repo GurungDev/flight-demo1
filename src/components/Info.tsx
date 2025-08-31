@@ -30,18 +30,16 @@ const Info = () => {
                 </div>
                 
                 {/* Right Section - Image with Angular Cutout */}
-                <div className='w-1/3 relative'>
-                    <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-800/20'></div>
-                    <div className='relative h-full'>
-                        <div className='absolute left-0 top-0 w-16 h-16 bg-slate-800 transform -translate-x-8 -translate-y-8 rotate-45'></div>
-                        <Image 
-                            src="/jett.png" 
-                            alt="Himalaya Jet Aircraft" 
-                            width={400} 
-                            height={400}
-                            className='object-cover h-full w-full rounded-r-2xl'
-                        />
-                    </div>
+                <div className='w-1/2'>
+                    <Image 
+                        src="/jett.png" 
+                        alt="Himalaya Jet Aircraft" 
+                        width={600} 
+                        height={600}
+                        quality={85}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    />
                 </div>
             </div>
         </div>
