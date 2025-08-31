@@ -40,14 +40,12 @@ const SwiperComponent = () => {
               }}
               breakpoints={{
                 320: {
-                  slidesPerView: 1,
-                  spaceBetween: 15,
-                  centeredSlides: true,
+                  slidesPerView: 1.1,
+                  spaceBetween: 11,
                 },
                 480: {
                   slidesPerView: 1.1,
-                  spaceBetween: 20,
-                  centeredSlides: true,
+                  spaceBetween: 11,
                 },
                 640: {
                   slidesPerView: 1.3,
@@ -135,6 +133,47 @@ const SwiperComponent = () => {
                   </div>
                 </div>
               </SwiperSlide>
+              <SwiperSlide>
+                <div className="card">
+                  <div className="image-container">
+                    <Image
+                      width={400}
+                      height={300}
+                      src="/swip2.avif"
+                      alt="Priority Boarding"
+                      className="image h-full w-full object-cover"
+                      quality={85}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    />
+                  </div>
+                  <div className="content">
+                    <h2>Priority Boarding</h2>
+                    <p>Skip the queue, board first</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              
+              <SwiperSlide>
+                <div className="card">
+                  <div className="image-container">
+                    <Image
+                      width={400}
+                      height={300}
+                      src="/swip3.avif"
+                      alt="Extra Baggage Allowance"
+                      className="image h-full w-full object-cover"
+                      quality={85}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    />
+                  </div>
+                  <div className="content">
+                    <h2>Extra Baggage</h2>
+                    <p>More luggage, less worry</p>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
 
             {/* Custom Navigation Buttons */}
@@ -168,14 +207,13 @@ const SwiperComponent = () => {
                 height: 300px;
                 width: 100%;
                 background: #1a1a1a;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+        
                 margin: 0 auto;
               }
 
               .card:hover {
                 transform: translateY(-3px);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-                border-color: rgba(59, 130, 246, 0.5);
+
               }
 
               .image-container {
@@ -316,8 +354,9 @@ const SwiperComponent = () => {
                 }
 
                 .card {
-                  height: 280px;
+                  height: 380px;
                   border-radius: 10px;
+                  max-width: 330px;
                 }
 
                 .content {
@@ -357,8 +396,9 @@ const SwiperComponent = () => {
                 }
 
                 .card {
-                  height: 320px;
+                  height: 350px;
                   border-radius: 12px;
+                  max-width: 330px;
                 }
 
                 .content {

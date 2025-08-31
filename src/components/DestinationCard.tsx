@@ -11,8 +11,8 @@ interface DestinationCardProps {
 
 const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price, miles, image }) => {
   return (
-    <div className="professional-card w-[500px] group cursor-pointer rounded-[30px] overflow-hidden border-2 border-white/20  shadow-lg ">
-      <div className="h-[400px] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
+    <div className="md:w-[500px] w-auto md:px-0 px-1 group cursor-pointer rounded-[30px] overflow-hidden shadow-lg shadow-black ">
+      <div className="h-[400px]  flex items-center justify-center relative overflow-hidden">
         {/* Background Image or Gradient */}
         {image ? (
           <Image
@@ -24,7 +24,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price,
             style={{ objectFit: 'cover' }}
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700"></div>
+          <div className="absolute inset-0 "></div>
         )}
 
         {/* Overlay - Increased opacity on hover */}
