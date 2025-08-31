@@ -42,7 +42,7 @@ export default function RootLayout({
           <main className="flex-1 overflow-y-auto">
             {children}
             <div className="text-center mt-40 mb-10">
-              <h2 className="text-9xl md:text-10xl lg:text-[25dvh] font-bold bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg mb-6">
+              <h2 className="text-9xl md:text-10xl lg:text-[25dvh] font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent drop-shadow-lg mb-6">
                 Himalaya Jet
               </h2>
             </div>

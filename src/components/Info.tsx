@@ -4,9 +4,9 @@ import React from 'react'
 const Info = () => {
     return (
         <div className='bg-gradient-to-r from-slate-800 via-slate-900 to-slate-900 rounded-2xl shadow-2xl overflow-hidden my-16 mx-4'>
-            <div className='flex items-center min-h-[400px]'>
+            <div className='flex flex-col md:flex-row items-center min-h-[400px]'>
                 {/* Left Section - Text Content */}
-                <div className='w-2/3 p-12 text-left'>
+                <div className='w-full md:w-2/3 p-12 text-left'>
                     <div className='space-y-6'>
                         <div className='space-y-2'>
                             <p className='text-5xl font-bold text-white '>
@@ -30,7 +30,7 @@ const Info = () => {
                 </div>
                 
                 {/* Right Section - Image with Angular Cutout */}
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <Image 
                         src="/jett.png" 
                         alt="Himalaya Jet Aircraft" 

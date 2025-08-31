@@ -24,7 +24,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
   const steps = [
     { id: 1, title: 'Flying from', icon: IoLocation, completed: !!formData.flyingFrom },
     { id: 2, title: 'Flying to', icon: IoAirplane, completed: !!formData.flyingTo },
-    { id: 3, title: 'Who&apos;s traveling', icon: IoPeople, completed: formData.adults > 0 },
+    { id: 3, title: 'Who\'s traveling', icon: IoPeople, completed: formData.adults > 0 },
     { id: 4, title: 'Timetable', icon: IoCalendar, completed: !!formData.departureDate }
   ]
 
@@ -116,7 +116,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                   <IoLocation className="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-400" size={20} />
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  {['Kathmandu, KTM', 'Delhi, DEL', 'Mumbai, BOM', 'Dubai, DXB'].map((city) => (
+                  {['London, LHR', 'Paris, CDG', 'New York, JFK', 'Dubai, DXB'].map((city) => (
                     <button
                       key={city}
                       onClick={() => handleInputChange('flyingFrom', city)}
@@ -149,7 +149,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                   <IoAirplane className="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-400" size={20} />
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  {['London, LHR', 'Paris, CDG', 'New York, JFK', 'Tokyo, NRT'].map((city) => (
+                  {['Kathmandu, KTM', 'Delhi, DEL', 'Mumbai, BOM', 'Tokyo, NRT'].map((city) => (
                     <button
                       key={city}
                       onClick={() => handleInputChange('flyingTo', city)}
