@@ -41,7 +41,9 @@ export default function RootLayout({
           {/* Main content scrolls independently */}
           <main className="flex-1 overflow-y-auto">
             {children}
-            <div className="hidden min-[1100px]:block text-center mt-40 mb-10">
+ 
+            <div className="hidden min-[1100px]:block text-center pt-40 pb-10 glass">
+ 
               <h2 className="text-9xl md:text-10xl lg:text-[25dvh] font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent drop-shadow-lg mb-6">
                 Himalaya Jet
               </h2>
