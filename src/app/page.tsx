@@ -5,6 +5,7 @@ import DestinationSection from '@/components/DestinationSection'
 import LifeExpSlider from '@/components/sliders/LifeExpSlider'
 import ExperienceSilder from '@/components/sliders/ExperienceSilder'
 import Info from '@/components/Info'
+import LatestNews from '@/components/LatestNews'
 import ImageComp from '@/components/ImageComp'
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
         <LifeExpSlider />
         <ImageComp />
         <ExperienceSilder />
+        <LatestNews/>
         <Footer />
       </div>
     </main>

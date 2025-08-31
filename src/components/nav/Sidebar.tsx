@@ -88,6 +88,7 @@ export default function Sidebar() {
           <div className="glass-light p-3 rounded-2xl border border-white/20">
             {isExpanded ? (
               <div className="flex items-center space-x-3">
+
                 <Image 
                   src="/small-Himalaya-Logo.png" 
                   alt="Logo" 
@@ -108,6 +109,7 @@ export default function Sidebar() {
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
               />
+
             )}
           </div>
         </div>
@@ -167,7 +169,7 @@ export default function Sidebar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-80 glass border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-full glass border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         {/* Background Pattern */}
@@ -177,6 +179,7 @@ export default function Sidebar() {
         <div className="relative  flex items-center justify-center mt-20 ">
           <div className="glass-light p-4 rounded-2xl border border-white/20">
             <div className="flex items-center  ">
+
               <Image 
                 src="/small-Himalaya-Logo.png" 
                 alt="Logo" 
@@ -186,6 +189,7 @@ export default function Sidebar() {
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
               />
+=
             
             </div>
           </div>
