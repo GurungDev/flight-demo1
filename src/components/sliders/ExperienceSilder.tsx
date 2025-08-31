@@ -98,7 +98,7 @@ const SwiperComponent = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/swip2.avif"
+                      src="/swip11.avif"
                       alt="Priority Boarding"
                       className="image h-full w-full object-cover"
                       quality={85}
@@ -119,7 +119,7 @@ const SwiperComponent = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/swip3.avif"
+                      src="/swip22.avif"
                       alt="Extra Baggage Allowance"
                       className="image h-full w-full object-cover"
                       quality={85}
