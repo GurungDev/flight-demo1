@@ -22,11 +22,11 @@ const SwiperComponent = () => {
         </div>
         
         <div id='swiper-LifeExp' className='flex flex-col pt-10  '>
-          <div className="swiper-container ">
+          <div className=" ">
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={20}
-              slidesPerView={1}
+              slidesPerView={1.1}
               navigation={{
                 nextEl: '.Life-custom-next',
                 prevEl: '.Life-custom-prev',

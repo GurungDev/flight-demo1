@@ -39,7 +39,7 @@ const newsArticles: NewsArticle[] = [
 
 const LatestNews: React.FC = () => {
   return (
-    <section className="p-4 md:p-6 lg:p-8 mx-auto app-layout">
+    <section className="py-4 md:py-6 lg:py-8  app-layout">
       <h2 className="text-2xl md:text-3xl font-[300] mb-1">Latest News</h2  >
       <p className="text-gray-500 mb-4 md:mb-14">Top headlines and breaking news</p>
 

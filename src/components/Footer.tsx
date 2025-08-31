@@ -85,8 +85,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="glass border-t rounded-t-[70px] border-white/10   ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="glass border-t pt-5 rounded-t-[20px] min-[1200px]:rounded-t-[70px] border-white/10   ">
+      <div className="app-layout mx-auto   py-12">
         {/* Main footer content */}
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -152,7 +152,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all"
               />
               <button className="btn-subscribe rounded-r-md bg-amber-600 rounded-l-none">
                 Subscribe
