@@ -152,7 +152,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="md:flex-1 md:px-4 px-2 md:py-2 rounded-l-md glass-light border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all"
               />
               <button className="btn-primary rounded-l-none">
                 Subscribe

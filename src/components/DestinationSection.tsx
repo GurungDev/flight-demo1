@@ -94,7 +94,7 @@ const DestinationSection = () => {
                 <div className="section-header pt-32">
                     <h1 className="text-center mb-4">
                         <span className="font-[300]"> Deals from</span>
-                        <span className="text-blue-500"> Himalaya Jet </span>
+                        <span className="text-yellow-500"> Himalaya Jet </span>
                     </h1>
                     <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto">
                         Let us inspire your next trip with exclusive offers and premium destinations
