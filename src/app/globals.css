@@ -48,9 +48,10 @@ body::before {
 
 /* Enhanced App Layout */
 .app-layout {
-  margin: 0 auto;
+
   width: 95%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
  

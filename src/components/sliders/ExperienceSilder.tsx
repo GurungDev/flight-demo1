@@ -10,8 +10,8 @@ import 'swiper/css/pagination';
 
 const SwiperComponent = () => {
   return (
-    <div className='app-layout py-8 md:py-16 lg:py-20'>
-      <div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 md:gap-12  md:px-6 lg:px-8'>
+    <div className='app-layout py-8 md:py-16 lg:py-20 '>
+      <div className='flex flex-col min-[1300px]:flex-row w-full justify-center items-center gap-8 md:gap-12  md:px-6 lg:px-8'>
         
         {/* Text Section */}
         <div className='flex flex-col justify-center text-center lg:text-left max-w-md lg:max-w-lg order-1 lg:order-1'>
