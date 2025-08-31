@@ -146,16 +146,16 @@ export default function Sidebar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-full glass border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${
+        className={`mobile-sidebar md:hidden fixed top-0 left-0 h-screen w-full bg-[#000216] border-r border-white/10 flex flex-col transition-all duration-300 ease-in-out z-40 ${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-800/30 to-slate-900/50 opacity-60" />
+        <div className="absolute inset-0 " />
 
         {/* Logo Section */}
         <div className="relative flex items-center justify-center mt-20">
-          <div className="glass-light p-4 rounded-2xl border border-white/20">
+          <div className=" rounded-2xl">
             <Image
               src="/small-Himalaya-Logo.png"
               alt="Logo"

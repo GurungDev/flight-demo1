@@ -90,130 +90,131 @@ const SwiperComponent = () => {
               }}
               className="swiper"
             >
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={500}
-                      height={400}
-                      src="/swip1.avif"
-                      alt="Exclusive Lounges"
-                      className="image h-full w-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Exclusive Lounges</h2>
-                    <p>Access premium lounges worldwide</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/swip2.avif"
-                      alt="Priority Boarding"
-                      className="image h-full w-full object-cover"
-                      quality={85}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Priority Boarding</h2>
-                    <p>Skip the queue, board first</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/swip3.avif"
-                      alt="Extra Baggage Allowance"
-                      className="image h-full w-full object-cover"
-                      quality={85}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Extra Baggage</h2>
-                    <p>More luggage, less worry</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/swip1.avif"
-                      alt="Miles Earning"
-                      className="image h-full w-full object-cover"
-                      priority
-                      quality={85}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Earn Miles</h2>
-                    <p>Every flight earns you rewards</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/swip2.avif"
-                      alt="Special Offers"
-                      className="image h-full w-full object-cover"
-                      quality={85}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Special Offers</h2>
-                    <p>Member-only deals and discounts</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/swip3.avif"
-                      alt="24/7 Support"
-                      className="image h-full w-full object-cover"
-                      quality={85}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>24/7 Support</h2>
-                    <p>Dedicated guest assistance</p>
-                  </div>
-                </div>
-              </SwiperSlide>
+    <SwiperSlide>
+  <div className="card">
+    <div className="image-container">
+      <Image
+        width={500}
+        height={400}
+        src="/swip1.jpg"
+        alt="Exclusive Lounges"
+        className="image h-full w-full object-cover"
+        priority
+      />
+    </div>
+    <div className="content">
+      <h2>Earn Exclusive Rewards</h2>
+      <p>Enjoy premium perks with every flight</p>
+    </div>
+  </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+    <div className="card">
+        <div className="image-container">
+        <Image
+            width={400}
+            height={300}
+            src="/swip2.avif"
+            alt="Free Wi-Fi"
+            className="image h-full w-full object-cover"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="..."
+        />
+        </div>
+        <div className="content">
+        <h2>Free Wi-Fi Chat Onboard</h2>
+        <p>Stay connected above the clouds</p>
+        </div>
+    </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+    <div className="card">
+        <div className="image-container">
+        <Image
+            width={400}
+            height={300}
+            src="/swip3.webp"
+            alt="Reward Shop"
+            className="image h-full w-full object-cover"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="..."
+        />
+        </div>
+        <div className="content">
+        <h2>Reward Shop</h2>
+        <p>Redeem miles for exclusive items</p>
+        </div>
+    </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+    <div className="card">
+        <div className="image-container">
+        <Image
+            width={400}
+            height={300}
+            src="/swip4.jpg"
+            alt="Personalised Benefits"
+            className="image h-full w-full object-cover"
+            priority
+            quality={85}
+            placeholder="blur"
+            blurDataURL="..."
+        />
+        </div>
+        <div className="content">
+        <h2>Personalised Benefits</h2>
+        <p>Tailored rewards just for you</p>
+        </div>
+    </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+    <div className="card">
+        <div className="image-container">
+        <Image
+            width={400}
+            height={300}
+            src="/swip5.jpg"
+            alt="Special Offers"
+            className="image h-full w-full object-cover"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="..."
+        />
+        </div>
+        <div className="content">
+        <h2>Special Offers</h2>
+        <p>Unlock exclusive travel deals</p>
+        </div>
+    </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+    <div className="card">
+        <div className="image-container">
+        <Image
+            width={400}
+            height={300}
+            src="/swip6.jpg"
+            alt="24/7 Support"
+            className="image h-full w-full object-cover"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="..."
+        />
+        </div>
+        <div className="content">
+        <h2>24/7 Guest Support</h2>
+        <p>We&apos;re here whenever you need us</p>
+        </div>
+    </div>
+    </SwiperSlide>
+
             </Swiper>
 
             {/* Custom Navigation Buttons */}
@@ -301,6 +302,29 @@ const SwiperComponent = () => {
                 font-weight: 500;
                 line-height: 1.4;
               }
+
+              .image-container::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+                opacity: 0.6;
+                transition: opacity 0.3s ease-in-out;   
+                z-index: 1;
+                }
+
+                .card:hover .image-container::after {
+                    opacity: 0.1;
+                    }
+
+                    .card:hover .image {
+  transform: scale(1.05);
+}
+
+.image {
+  position: relative;
+  z-index: 0;
+}
 
               /* Custom Swiper Styles */
               :global(.swiper) {
