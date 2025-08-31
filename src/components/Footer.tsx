@@ -85,8 +85,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="glass border-t rounded-t-[70px] border-white/10   ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="glass border-t pt-5 rounded-t-[20px] min-[1200px]:rounded-t-[70px] border-white/10   ">
+      <div className="app-layout mx-auto   py-12">
         {/* Main footer content */}
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">

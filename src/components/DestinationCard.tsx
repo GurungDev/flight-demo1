@@ -28,7 +28,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price,
         )}
 
         {/* Overlay - Increased opacity on hover */}
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-300"></div>
+        <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all duration-300"></div>
 
         {/* Badge */}
         
