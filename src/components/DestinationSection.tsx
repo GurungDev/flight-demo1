@@ -103,36 +103,50 @@ const DestinationSection = () => {
 
                 {/* Swiper for Destination Cards */}
                 <div className="mt-16 relative mx-auto">
-                    <Swiper
-                        effect={"coverflow"}
-                        grabCursor={false}
-                        centeredSlides={true}
-                        slidesPerView={3}
-                        initialSlide={2}
-                        onSwiper={(swiper) => (swiperRef.current = swiper)}
-                        loop={true}
-                        coverflowEffect={{
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 200,
-                            modifier: 1.2,
-                            slideShadows: false,
-                        }}
-                        navigation={{
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        }}
-                        modules={[EffectCoverflow, Navigation]}
-                        className="destination-swiper"
-                        style={{ padding: "0px 0" }}
-                        speed={600}
+                <Swiper
+                    effect={"coverflow"}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    initialSlide={2}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    loop={true}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1.2,
+                        slideShadows: false,
+                    }}
+                    modules={[EffectCoverflow, Navigation]}
+                    className="destination-swiper"
+                    style={{ padding: "0px 0" }}
+                    speed={600}
+                    breakpoints={{
+                        320: { // very small phones
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        },
+                        640: { // typical mobile
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        },
+                        768: { // tablets
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                        },
+                        1024: { // small laptops
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                        },
+                    }}
                     >
-                        {destinations.map((destination) => (
-                            <SwiperSlide key={destination.id}>
-                                <DestinationCard {...destination} />
-                            </SwiperSlide>
-                        ))}
+                    {destinations.map((destination) => (
+                        <SwiperSlide key={destination.id}>
+                        <DestinationCard {...destination} />
+                        </SwiperSlide>
+                    ))}
                     </Swiper>
+
 
                    
                 </div>

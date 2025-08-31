@@ -14,7 +14,7 @@ const SwiperComponent = () => {
       <div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 md:gap-12 px-4 md:px-6 lg:px-8'>
         
         {/* Text Section */}
-        <div className='flex flex-col justify-center text-center lg:text-left max-w-md lg:max-w-lg order-2 lg:order-1'>
+        <div className='flex flex-col justify-center text-center lg:text-left max-w-md lg:max-w-lg order-1 lg:order-1'>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
             Experience Himalayan 
           </h1>

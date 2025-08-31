@@ -5,6 +5,7 @@ import DestinationSection from '@/components/DestinationSection'
 import LifeExpSlider from '@/components/sliders/LifeExpSlider'
 import ExperienceSilder from '@/components/sliders/ExperienceSilder'
 import Info from '@/components/Info'
+import LatestNews from '@/components/LatestNews'
  
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <Info />
         <LifeExpSlider/>
         <ExperienceSilder />
+        <LatestNews/>
         <Footer />
       </div>
     </main>
