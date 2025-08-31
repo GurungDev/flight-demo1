@@ -10,22 +10,26 @@ import 'swiper/css/pagination';
 
 const SwiperComponent = () => {
   return (
-    <div className='flex flex-row app-layout py-20'>
-      <div className='flex flex-col lg:flex-row w-full justify-center items-center gap-12'>
-        <div className='flex flex-col justify-center text-left max-w-md'>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    <div className='app-layout py-8 md:py-16 lg:py-20'>
+      <div className='flex flex-col lg:flex-row w-full justify-center items-center gap-8 md:gap-12 px-4 md:px-6 lg:px-8'>
+        
+        {/* Text Section */}
+        <div className='flex flex-col justify-center text-center lg:text-left max-w-md lg:max-w-lg order-2 lg:order-1'>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
             Experience Himalayan 
           </h1>
-          <span className="text-lg text-gray-300 leading-relaxed">
+          <span className="text-base md:text-lg text-gray-300 leading-relaxed px-2 md:px-0">
             Your journey with us marks the beginning of something extraordinary. From our hub at Zayed International Airport, we extend our renowned hospitality to ensure every step of your journey is simply unforgettable.  
           </span>
         </div>
-        <div className="w-full max-w-4xl">
+
+        {/* Swiper Section */}
+        <div className="w-full max-w-sm md:max-w-2xl lg:max-w-4xl order-1 lg:order-2">
           <div className="swiper-container">
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={30}
-              slidesPerView={2}
+              spaceBetween={20}
+              slidesPerView={1}
               navigation={{
                 nextEl: '.custom-next',
                 prevEl: '.custom-prev',
@@ -37,15 +41,33 @@ const SwiperComponent = () => {
               breakpoints={{
                 320: {
                   slidesPerView: 1,
-                  spaceBetween: 20
+                  spaceBetween: 15,
+                  centeredSlides: true,
+                },
+                480: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 20,
+                  centeredSlides: true,
                 },
                 640: {
-                  slidesPerView: 1,
-                  spaceBetween: 25
+                  slidesPerView: 1.3,
+                  spaceBetween: 25,
+                  centeredSlides: true,
+                },
+                768: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 25,
+                  centeredSlides: false,
                 },
                 1024: {
                   slidesPerView: 2,
-                  spaceBetween: 30
+                  spaceBetween: 30,
+                  centeredSlides: false,
+                },
+                1280: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                  centeredSlides: false,
                 },
               }}
               onSlideChange={(swiper) => {
@@ -117,7 +139,7 @@ const SwiperComponent = () => {
                       height={400}
                       src="/swip3.avif"
                       alt="Extra Baggage Allowance"
-                      className="image h-full w-full object-cover   "
+                      className="image h-full w-full object-cover"
                     />
                   </div>
                   <div className="content">
@@ -146,27 +168,26 @@ const SwiperComponent = () => {
               .swiper-container {
                 position: relative;
                 width: 100%;
-                max-width: 800px;
                 margin: 0 auto;
-                padding: 0px 0px 20px 20px;
+                padding: 0 10px 20px 10px;
               }
 
               .card {
                 position: relative;
-                border-radius: 16px;
+                border-radius: 12px;
                 overflow: hidden;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
-                height: 450px;
+                height: 300px;
                 width: 100%;
-                max-width: 480px;
                 background: #1a1a1a;
                 border: 1px solid rgba(255, 255, 255, 0.1);
+                margin: 0 auto;
               }
 
               .card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                transform: translateY(-3px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
                 border-color: rgba(59, 130, 246, 0.5);
               }
 
@@ -195,49 +216,56 @@ const SwiperComponent = () => {
                 right: 0;
                 background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
                 color: white;
-                padding: 30px 20px 20px;
+                padding: 20px 15px 15px;
               }
 
               .content h2 {
-                font-size: 22px;
+                font-size: 18px;
                 font-weight: bold;
-                margin: 0 0 8px 0;
+                margin: 0 0 6px 0;
                 color: #ffffff;
                 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+                line-height: 1.3;
               }
 
               .content p {
-                font-size: 16px;
+                font-size: 14px;
                 opacity: 0.9;
                 margin: 0;
                 color: #e5e7eb;
                 font-weight: 500;
+                line-height: 1.4;
               }
 
               /* Custom Swiper Styles */
+              :global(.swiper) {
+                padding-bottom: 50px !important;
+              }
+
               :global(.swiper-pagination) {
                 position: absolute !important;
-                bottom: 10px !important;
+                bottom: 15px !important;
                 left: 50% !important;
                 transform: translateX(-50%) !important;
                 display: flex !important;
                 justify-content: center !important;
+                width: auto !important;
               }
 
               :global(.swiper-pagination-bullet) {
                 background-color: rgba(255, 255, 255, 0.6) !important;
                 opacity: 0.7 !important;
                 transition: all 0.3s !important;
-                width: 12px !important;
-                height: 12px !important;
+                width: 10px !important;
+                height: 10px !important;
                 border-radius: 50% !important;
-                margin: 0 6px !important;
+                margin: 0 4px !important;
               }
 
               :global(.swiper-pagination-bullet-active) {
                 opacity: 1 !important;
                 background-color: #3b82f6 !important;
-                transform: scale(1.2) !important;
+                transform: scale(1.3) !important;
               }
 
               /* Hide default Swiper navigation */
@@ -249,15 +277,15 @@ const SwiperComponent = () => {
               /* Custom Navigation Container */
               .navigation-container {
                 display: flex;
-                justify-content: flex-end;
-                gap: 12px;
-                margin-top: 20px;
-                padding: 0 20px;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 15px;
+                padding: 0 10px;
               }
 
               .navigation-btn {
-                width: 44px;
-                height: 44px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
                 border: 2px solid rgba(255, 255, 255, 0.2);
                 background-color: rgba(26, 26, 26, 0.8);
@@ -269,6 +297,9 @@ const SwiperComponent = () => {
                 transition: all 0.3s ease;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                 backdrop-filter: blur(10px);
+                min-height: 44px;
+                min-width: 44px;
+                touch-action: manipulation;
               }
 
               .navigation-btn:hover:not(.disabled) {
@@ -284,68 +315,328 @@ const SwiperComponent = () => {
                 cursor: not-allowed;
                 border-color: rgba(255, 255, 255, 0.1);
                 color: rgba(255, 255, 255, 0.3);
-                position: relative;
               }
 
-              .navigation-btn.disabled::after {
-                content: "🚫";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 12px;
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: 50%;
+              .navigation-btn svg {
                 width: 18px;
                 height: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
               }
 
-              .navigation-btn.disabled svg {
-                opacity: 0.3;
-              }
-
-              /* Mobile styles */
-              @media (max-width: 768px) {
+              /* Small Mobile (≤375px) */
+              @media (max-width: 375px) {
                 .swiper-container {
-                  max-width: 100%;
-                  padding: 0 10px 20px 10px;
+                  padding: 0 5px 15px 5px;
                 }
 
                 .card {
-                  height: 320px;
-                  max-width: 280px;
+                  height: 280px;
+                  border-radius: 10px;
                 }
 
-                .navigation-container {
-                  padding: 0 15px;
-                  margin-top: 15px;
+                .content {
+                  padding: 18px 12px 12px;
                 }
-                
+
+                .content h2 {
+                  font-size: 16px;
+                  margin-bottom: 4px;
+                }
+
+                .content p {
+                  font-size: 13px;
+                }
+
                 .navigation-btn {
-                  width: 36px;
-                  height: 36px;
+                  width: 38px;
+                  height: 38px;
                 }
-                
+
                 .navigation-btn svg {
                   width: 16px;
                   height: 16px;
                 }
-                
-                .navigation-btn.disabled::after {
-                  font-size: 10px;
-                  width: 14px;
-                  height: 14px;
+
+                :global(.swiper-pagination-bullet) {
+                  width: 8px !important;
+                  height: 8px !important;
+                  margin: 0 3px !important;
+                }
+              }
+
+              /* Mobile Portrait (376px - 639px) */
+              @media (min-width: 376px) and (max-width: 639px) {
+                .swiper-container {
+                  padding: 0 8px 18px 8px;
+                }
+
+                .card {
+                  height: 320px;
+                  border-radius: 12px;
+                }
+
+                .content {
+                  padding: 20px 15px 15px;
                 }
 
                 .content h2 {
-                  font-size: 20px;
+                  font-size: 18px;
+                  margin-bottom: 6px;
                 }
 
                 .content p {
                   font-size: 14px;
+                }
+              }
+
+              /* Mobile Landscape / Small Tablet (640px - 767px) */
+              @media (min-width: 640px) and (max-width: 767px) {
+                .swiper-container {
+                  padding: 0 12px 20px 12px;
+                }
+
+                .card {
+                  height: 350px;
+                  border-radius: 14px;
+                }
+
+                .content {
+                  padding: 25px 18px 18px;
+                }
+
+                .content h2 {
+                  font-size: 20px;
+                  margin-bottom: 7px;
+                }
+
+                .content p {
+                  font-size: 15px;
+                }
+
+                .navigation-btn {
+                  width: 42px;
+                  height: 42px;
+                }
+              }
+
+              /* Tablet (768px - 1023px) */
+              @media (min-width: 768px) and (max-width: 1023px) {
+                .swiper-container {
+                  padding: 0 15px 20px 15px;
+                }
+
+                .card {
+                  height: 380px;
+                  border-radius: 15px;
+                }
+
+                .content {
+                  padding: 28px 20px 20px;
+                }
+
+                .content h2 {
+                  font-size: 21px;
+                  margin-bottom: 8px;
+                }
+
+                .content p {
+                  font-size: 15px;
+                }
+
+                .navigation-container {
+                  justify-content: flex-end;
+                  gap: 12px;
+                  margin-top: 20px;
+                  padding: 0 20px;
+                }
+
+                .navigation-btn {
+                  width: 44px;
+                  height: 44px;
+                }
+
+                .navigation-btn svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+
+              /* Desktop (1024px+) */
+              @media (min-width: 1024px) {
+                .swiper-container {
+                  padding: 0 20px 20px 20px;
+                  max-width: 800px;
+                }
+
+                .card {
+                  height: 450px;
+                  border-radius: 16px;
+                  max-width: 480px;
+                }
+
+                .content {
+                  padding: 30px 20px 20px;
+                }
+
+                .content h2 {
+                  font-size: 22px;
+                  margin-bottom: 8px;
+                }
+
+                .content p {
+                  font-size: 16px;
+                }
+
+                .navigation-container {
+                  justify-content: flex-end;
+                  gap: 12px;
+                  margin-top: 20px;
+                  padding: 0 20px;
+                }
+
+                .navigation-btn {
+                  width: 44px;
+                  height: 44px;
+                }
+
+                .navigation-btn svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+
+              /* Touch device optimizations */
+              @media (hover: none) and (pointer: coarse) {
+                .card:hover {
+                  transform: none;
+                  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+                  border-color: rgba(255, 255, 255, 0.1);
+                }
+
+                .card:active {
+                  transform: scale(0.98);
+                  transition: transform 0.15s ease;
+                }
+
+                .navigation-btn:hover {
+                  transform: none;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                  border-color: rgba(255, 255, 255, 0.2);
+                  background-color: rgba(26, 26, 26, 0.8);
+                }
+
+                .navigation-btn:active:not(.disabled) {
+                  transform: scale(0.95);
+                  transition: transform 0.1s ease;
+                  border-color: #3b82f6;
+                  background-color: #3b82f6;
+                }
+
+                .card:hover .image {
+                  transform: none;
+                }
+              }
+
+              /* Improve swiper wrapper alignment */
+              :global(.swiper-wrapper) {
+                align-items: center;
+              }
+
+              /* Better spacing for pagination on different screen sizes */
+              @media (max-width: 639px) {
+                :global(.swiper) {
+                  padding-bottom: 45px !important;
+                }
+
+                :global(.swiper-pagination) {
+                  bottom: 12px !important;
+                }
+              }
+
+              @media (min-width: 640px) and (max-width: 1023px) {
+                :global(.swiper) {
+                  padding-bottom: 55px !important;
+                }
+
+                :global(.swiper-pagination) {
+                  bottom: 15px !important;
+                }
+              }
+
+              /* Responsive layout adjustments */
+              @media (max-width: 1023px) {
+                .navigation-container {
+                  justify-content: center;
+                }
+              }
+
+              /* Improve touch targets for accessibility */
+              .navigation-btn {
+                -webkit-tap-highlight-color: transparent;
+                user-select: none;
+              }
+
+              /* Better visual feedback for disabled state on mobile */
+              @media (max-width: 639px) {
+                .navigation-btn.disabled {
+                  opacity: 0.3;
+                }
+
+                .navigation-btn.disabled::after {
+                  display: none;
+                }
+              }
+
+              /* Ensure proper spacing on very small screens */
+              @media (max-width: 320px) {
+                .swiper-container {
+                  padding: 0 5px 15px 5px;
+                }
+
+                .card {
+                  height: 260px;
+                  border-radius: 10px;
+                }
+
+                .content {
+                  padding: 15px 10px 10px;
+                }
+
+                .content h2 {
+                  font-size: 15px;
+                }
+
+                .content p {
+                  font-size: 12px;
+                }
+
+                .navigation-btn {
+                  width: 36px;
+                  height: 36px;
+                }
+
+                .navigation-btn svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+
+              /* Landscape mobile optimization */
+              @media (max-height: 500px) and (orientation: landscape) {
+                .card {
+                  height: 250px;
+                }
+
+                .content {
+                  padding: 15px 12px 12px;
+                }
+
+                .content h2 {
+                  font-size: 16px;
+                  margin-bottom: 4px;
+                }
+
+                .content p {
+                  font-size: 13px;
                 }
               }
             `}</style>
