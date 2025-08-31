@@ -24,7 +24,7 @@ const HeroSection = () => {
     <div className="relative h-[70vh] w-full">
       {/* Background Image */}
       <Image
-        src="/hero10.jpg"
+        src="/hero11.jpg"
         alt="Hero Background"
         fill
         priority
