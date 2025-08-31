@@ -37,14 +37,13 @@ const SwiperComponent = () => {
               }}
               breakpoints={{
                 320: {
-                  slidesPerView: 1,
-                  spaceBetween: 15,
-                  centeredSlides: true,
+                  slidesPerView: 1.1,
+                  spaceBetween: 11,
                 },
                 480: {
-                  slidesPerView: 1.2,
-                  spaceBetween: 20,
-                  centeredSlides: true,
+                  slidesPerView: 1.1,
+                  spaceBetween: 11,
+                 
                 },
                 640: {
                   slidesPerView: 1.5,
@@ -248,14 +247,13 @@ const SwiperComponent = () => {
                 height: 320px;
                 width: 100%;
                 background: #1a1a1a;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+          
                 margin: 0 auto;
               }
 
               .card:hover {
                 transform: translateY(-3px);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-                border-color: rgba(59, 130, 246, 0.5);
+         
               }
 
               .image-container {
@@ -470,9 +468,9 @@ const SwiperComponent = () => {
                 }
 
                 .card {
-                  height: 300px;
+                  height: 350px;
                   border-radius: 12px;
-                  max-width: 320px;
+                  max-width: 330px;
                   margin: 0 auto;
                 }
 
@@ -518,7 +516,7 @@ const SwiperComponent = () => {
                 }
 
                 .card {
-                  height: 280px;
+                   height: 350px;
                   max-width: 280px;
                 }
 
