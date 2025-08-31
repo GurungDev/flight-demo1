@@ -17,6 +17,8 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price,
         {image ? (
           <Image
             src={image}
+            width={500}
+            height={400}
             alt={`${city}, ${country}`}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             style={{ objectFit: 'cover' }}

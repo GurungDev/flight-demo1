@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import DestinationSection from '@/components/DestinationSection'
 import LifeExpSlider from '@/components/sliders/LifeExpSlider'
 import ExperienceSilder from '@/components/sliders/ExperienceSilder'
+import Info from '@/components/Info'
  
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="relative z-10 space-y-8">
         <HeroSection />
         <DestinationSection />
+        <Info />
         <LifeExpSlider/>
         <ExperienceSilder />
         <Footer />

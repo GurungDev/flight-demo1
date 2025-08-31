@@ -45,18 +45,14 @@ export default function Sidebar() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-800/30 to-slate-900/50 opacity-60"></div>
       
       {/* Logo Section */}
-      <div className="relative z-10 flex items-center justify-center mt-6 mb-8">
+      <div className="relative z-10 flex items-center justify-center mt-6 ">
         <div className="glass-light p-3 rounded-2xl border border-white/20">
           {isExpanded ? (
-            <div className="flex items-center space-x-3">
-              <Image src="/logo-big.png" alt="Logo" width={32} height={32} />
-              <div className="text-left">
-                <div className="text-lg font-bold text-blue-400">Himalaya</div>
-                <div className="text-xs text-gray-300">Jet</div>
-              </div>
+            <div className="">
+              <Image src="/small-Himalaya-Logo.png" alt="Logo" width={150} height={150} />
             </div>
           ) : (
-            <Image src="/logo-small.png" alt="Logo" width={32} height={32} />
+            <Image src="/small-Himalaya-Logo.png" alt="Logo" width={150} height={150} />
           )}
         </div>
       </div>
