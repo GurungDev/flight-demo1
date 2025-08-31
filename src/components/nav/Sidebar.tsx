@@ -88,11 +88,28 @@ export default function Sidebar() {
           <div className="glass-light p-3 rounded-2xl border border-white/20">
             {isExpanded ? (
               <div className="flex items-center space-x-3">
-                <Image src="/small-Himalaya-Logo.png" alt="Logo" width={200} height={140} />
 
-              </div>
+                <Image 
+                  src="/small-Himalaya-Logo.png" 
+                  alt="Logo" 
+                  width={200} 
+                  height={140}
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                />
+               </div>
             ) : (
-              <Image src="/small-Himalaya-Logo.png" alt="Logo" width={140} height={140} />
+              <Image 
+                src="/small-Himalaya-Logo.png" 
+                alt="Logo" 
+                width={140} 
+                height={140}
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+              />
+
             )}
           </div>
         </div>
@@ -143,20 +160,7 @@ export default function Sidebar() {
           ))}
         </ul>
 
-        {/* Bottom Section */}
-        <div className="relative z-10 mt-auto mb-6 px-3">
-          <div className={`glass-light rounded-xl p-3 border border-white/20 transition-all duration-300 ${isExpanded ? "opacity-100" : "opacity-0"
-            }`}>
-            <div className="text-center">
-              <div className="text-sm font-medium text-white mb-2">Guest Status</div>
-              <div className="text-xs text-gray-300">Silver Member</div>
-              <div className="w-full bg-gray-600 rounded-full h-1.5 mt-2">
-                <div className="bg-gradient-to-r from-blue-400 to-blue-600 h-1.5 rounded-full" style={{ width: '65%' }}></div>
-              </div>
-              <div className="text-xs text-gray-400 mt-1">65% to Gold</div>
-            </div>
-          </div>
-        </div>
+     
 
         {/* Decorative Elements */}
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-blue-500/10 rounded-full blur-xl"></div>
@@ -175,7 +179,17 @@ export default function Sidebar() {
         <div className="relative  flex items-center justify-center mt-20 ">
           <div className="glass-light p-4 rounded-2xl border border-white/20">
             <div className="flex items-center  ">
-              <Image src="/small-Himalaya-Logo.png" alt="Logo" width={200} height={200} />
+
+              <Image 
+                src="/small-Himalaya-Logo.png" 
+                alt="Logo" 
+                width={200} 
+                height={200}
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+              />
+=
             
             </div>
           </div>

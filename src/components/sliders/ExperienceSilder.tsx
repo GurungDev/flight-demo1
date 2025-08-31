@@ -98,30 +98,14 @@ const SwiperComponent = () => {
                 <div className="card">
                   <div className="image-container">
                     <Image
-                      width={500}
-                      height={400}
-                      src="/swip1.avif"
-                      alt="Exclusive Lounges"
-                      className="image h-full w-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="content">
-                    <h2>Exclusive Lounges</h2>
-                    <p>Access premium lounges worldwide</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              
-              <SwiperSlide>
-                <div className="card">
-                  <div className="image-container">
-                    <Image
-                      width={500}
-                      height={400}
+                      width={400}
+                      height={300}
                       src="/swip2.avif"
                       alt="Priority Boarding"
                       className="image h-full w-full object-cover"
+                      quality={85}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     />
                   </div>
                   <div className="content">
@@ -135,11 +119,14 @@ const SwiperComponent = () => {
                 <div className="card">
                   <div className="image-container">
                     <Image
-                      width={500}
-                      height={400}
+                      width={400}
+                      height={300}
                       src="/swip3.avif"
                       alt="Extra Baggage Allowance"
                       className="image h-full w-full object-cover"
+                      quality={85}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     />
                   </div>
                   <div className="content">

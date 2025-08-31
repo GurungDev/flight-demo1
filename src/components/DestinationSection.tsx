@@ -90,11 +90,11 @@ const DestinationSection = () => {
  
     return (
         <>
-            <div className="pt-20 app-layout">
-                <div className="section-header">
+            <div className=" app-layout">
+                <div className="section-header pt-20">
                     <h1 className="text-center mb-4">
                         Deals from
-                        <span className="text-blue-400"> Abu Dhabi</span>
+                        <span className="text-blue-400">Himalaya Jet</span>
                     </h1>
                     <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto">
                         Let us inspire your next trip with exclusive offers and premium destinations
