@@ -3,19 +3,19 @@ import React from 'react'
 
 const Info = () => {
     return (
-        <div className='bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden my-16 mx-4'>
+        <div className='bg-gradient-to-r from-slate-800 via-slate-900 to-slate-900 rounded-2xl shadow-2xl overflow-hidden my-16 mx-4'>
             <div className='flex items-center min-h-[400px]'>
                 {/* Left Section - Text Content */}
                 <div className='w-2/3 p-12 text-left'>
                     <div className='space-y-6'>
                         <div className='space-y-2'>
-                            <h2 className='text-4xl font-bold text-white'>
-                                Why Choose{' '}
-                                <span className='text-amber-500'>Himalaya Jet?</span>
-                            </h2>
+                            <p className='text-5xl font-bold text-white '>
+                                <span className='font-[300]'>Why Choose</span>
+                                <span className='text-amber-500 '> Himalaya Jet?</span>
+                            </p>
                         </div>
                         
-                        <p className='text-lg text-gray-300 leading-relaxed max-w-lg'>
+                        <p className='text-xl text-gray-300 leading-relaxed max-w-lg'>
                             Experience luxury travel with our premium fleet and world-class service. 
                             We connect you to the most beautiful destinations with unmatched comfort 
                             and reliability.

@@ -15,13 +15,13 @@ export default function Home() {
       <div className="fixed inset-0">
         {/* Main dark background */}
         <div className="absolute inset-0 bg-slate-900"></div>
-        
+
         {/* Subtle geometric lines pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_49%,rgba(148,163,184,0.1)_50%,transparent_51%)] bg-[length:40px_40px]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_49%,rgba(148,163,184,0.1)_50%,transparent_51%)] bg-[length:40px_40px]"></div>
         </div>
-        
+
         {/* Diagonal accent lines */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_49%,rgba(59,130,246,0.1)_50%,transparent_51%)] bg-[length:60px_60px]"></div>
@@ -42,8 +42,9 @@ export default function Home() {
         <LifeExpSlider />
         <ImageComp />
         <ExperienceSilder />
-        <LatestNews/>
+        <LatestNews />
         <Footer />
+       
       </div>
     </main>
   )

@@ -85,7 +85,7 @@ export default function Sidebar() {
 
         {/* Logo Section */}
         <div className="relative z-10 flex items-center justify-center mt-6  ">
-          <div className="glass-light p-3 rounded-2xl border border-white/20">
+          <div className="  p-3 rounded-2xl ">
             {isExpanded ? (
               <div className="flex items-center space-x-3">
 
@@ -121,7 +121,7 @@ export default function Sidebar() {
             className="absolute top-1/2 -translate-y-1/2 z-50
               glass-light rounded-full size-8 border border-white/20 
               flex items-center justify-center shadow-lg 
-              -right-4 transition-all duration-300 hover:scale-110 hover:border-blue-400/50"
+              -right-4 transition-all duration-300 hover:scale-110 hover:border-neutral-400/50"
           >
             <FaChevronRight
               className={`transform transition-transform duration-300 text-white ${isExpanded ? "rotate-180" : "rotate-0"
@@ -142,7 +142,7 @@ export default function Sidebar() {
               className="group"
             >
               <div className="flex items-center px-3 py-3 rounded-xl hover:bg-white/10 cursor-pointer transition-all duration-300 hover:translate-x-1 border border-transparent hover:border-white/20">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30 transition-all duration-300">
+                <div className="flex items-center justify-center w-8 h-8 rounded-lg  text-neutral-400 group-hover:bg-neutral-500/30 transition-all duration-300">
                   <span className="text-lg">{item.icon}</span>
                 </div>
 
@@ -150,10 +150,8 @@ export default function Sidebar() {
                   className={`ml-3 whitespace-nowrap overflow-hidden transition-all duration-300 ${isExpanded ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"
                     }`}
                 >
-                  <div className="text-white font-medium">{item.text}</div>
-                  <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                    {item.description}
-                  </div>
+                  <div className="text-white font-[300]">{item.text}</div>
+                 
                 </div>
               </div>
             </li>
@@ -163,8 +161,8 @@ export default function Sidebar() {
      
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-blue-500/10 rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 right-0 w-1 h-32 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent"></div>
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-neutral-500/10 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 right-0 w-1 h-32 bg-gradient-to-b from-transparent via-neutral-400/30 to-transparent"></div>
       </div>
 
       {/* Mobile Sidebar */}
@@ -204,7 +202,7 @@ export default function Sidebar() {
               onClick={() => setMobileMenuOpen(false)} // Close menu when item is clicked
             >
               <div className="flex items-center px-4 py-4 rounded-xl hover:bg-white/10 cursor-pointer transition-all duration-300 border border-transparent hover:border-white/20">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 group-hover:bg-blue-500/30 transition-all duration-300">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg border border-white/20 text-white group-hover:border-white/40 transition-all duration-300">
                   <span className="text-xl">{item.icon}</span>
                 </div>
 
@@ -222,8 +220,8 @@ export default function Sidebar() {
      
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 right-0 w-1 h-40 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent"></div>
+        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-neutral-500/10 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 right-0 w-1 h-40 bg-gradient-to-b from-transparent via-neutral-400/30 to-transparent"></div>
       </div>
     </>
   );

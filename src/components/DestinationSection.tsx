@@ -87,14 +87,14 @@ const DestinationSection = () => {
         },
     ]
     const swiperRef = useRef<SwiperCore | null>(null);
- 
+
     return (
         <>
             <div className=" app-layout">
-                <div className="section-header pt-20">
+                <div className="section-header pt-32">
                     <h1 className="text-center mb-4">
-                        Deals from
-                        <span className="text-blue-400">Himalaya Jet</span>
+                        <span className="font-[300]"> Deals from</span>
+                        <span className="text-blue-500"> Himalaya Jet </span>
                     </h1>
                     <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto">
                         Let us inspire your next trip with exclusive offers and premium destinations
@@ -102,60 +102,60 @@ const DestinationSection = () => {
                 </div>
 
                 {/* Swiper for Destination Cards */}
-                <div className="mt-16 relative mx-auto">
-                <Swiper
-                    effect={"coverflow"}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    initialSlide={2}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    loop={true}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 200,
-                        modifier: 1.2,
-                        slideShadows: false,
-                    }}
-                    modules={[EffectCoverflow, Navigation]}
-                    className="destination-swiper"
-                    style={{ padding: "0px 0" }}
-                    speed={600}
-                    breakpoints={{
-                        320: { // very small phones
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                        },
-                        640: { // typical mobile
-                        slidesPerView: 1.2,
-                        spaceBetween: 20,
-                        },
-                        768: { // tablets
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                        },
-                        1024: { // small laptops
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                        },
-                    }}
+                <div className="mt-24 relative mx-auto">
+                    <Swiper
+                        effect={"coverflow"}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        initialSlide={2}
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        loop={true}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 200,
+                            modifier: 1.2,
+                            slideShadows: false,
+                        }}
+                        modules={[EffectCoverflow, Navigation]}
+                        className="destination-swiper"
+                        style={{ padding: "0px 0" }}
+                        speed={600}
+                        breakpoints={{
+                            320: { // very small phones
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            640: { // typical mobile
+                                slidesPerView: 1.2,
+                                spaceBetween: 20,
+                            },
+                            768: { // tablets
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            1024: { // small laptops
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                            },
+                        }}
                     >
-                    {destinations.map((destination) => (
-                        <SwiperSlide key={destination.id}>
-                        <DestinationCard {...destination} />
-                        </SwiperSlide>
-                    ))}
+                        {destinations.map((destination) => (
+                            <SwiperSlide key={destination.id}>
+                                <DestinationCard {...destination} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
 
 
-                   
+
                 </div>
-                
+
                 {/* Custom Navigation Arrows */}
-                <div className="flex justify-center space-x-6 mt-8">
+                <div className="flex justify-center  mt-8">
                     <button
                         id={`swiper-button-prev`}
-                        className="btn-secondary w-14 h-14 flex justify-center items-center"
+                        className="border-1  w-14 h-14 flex justify-center items-center"
                         onClick={() => swiperRef.current?.slidePrev()}
                     >
                         <span className="text-2xl">
@@ -165,7 +165,7 @@ const DestinationSection = () => {
 
                     <button
                         id={`swiper-button-next`}
-                        className="btn-secondary w-14 h-14 flex justify-center items-center"
+                        className="border-1 w-14 h-14 flex justify-center items-center"
                         onClick={() => swiperRef.current?.slideNext()}
                     >
                         <span className="text-2xl">

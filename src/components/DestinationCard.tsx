@@ -11,7 +11,7 @@ interface DestinationCardProps {
 
 const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price, miles, image }) => {
   return (
-    <div className="professional-card w-[500px] group cursor-pointer">
+    <div className="professional-card w-[500px] group cursor-pointer rounded-[30px] overflow-hidden border-2 border-white/20  shadow-lg ">
       <div className="h-[400px] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center relative overflow-hidden">
         {/* Background Image or Gradient */}
         {image ? (
@@ -31,9 +31,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price,
         <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-300"></div>
 
         {/* Badge */}
-        <div className="absolute top-3 left-3 glass-light px-3 py-1.5 rounded-full font-medium text-white text-xs">
-          Round trip - Economy
-        </div>
+        
 
         {/* Price and Miles at Bottom */}
         <div className="absolute bottom-4 left-4 text-white">

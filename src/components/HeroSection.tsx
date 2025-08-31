@@ -6,7 +6,7 @@ import FlightSearchModal from "./FlightSearchModal";
 
 const HeroSection = () => {
   const [tripType, setTripType] = useState('round-trip');
-  const [origin, setOrigin] = useState('KTM');
+  const [origin, setOrigin] = useState('LHR');
   const [destination, setDestination] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,7 +24,7 @@ const HeroSection = () => {
     <div className="relative h-[70vh] w-full">
       {/* Background Image */}
       <Image
-        src="/hero2.png"
+        src="/hero10.jpg"
         alt="Hero Background"
         fill
         priority
@@ -35,30 +35,29 @@ const HeroSection = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/10"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-end justify-center h-full text-center text-white px-4 w-[80%] m-auto ">
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
-              Welcome to Himalaya Jet
+
+      <div className="relative z-10 flex flex-col items-start justify-center h-full  text-white px-4 w-[72%] m-auto ">
+        <div className=" ">
+          <div className="  ">
+            <h1 className="text-4xl md:text-4xl font-[400] text-white drop-shadow-lg">
+              Experience  with Himalaya Jet
             </h1>
-          </div>
-          
-          <div>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-              Experience luxury travel with Himalaya Jet, connecting the world with exceptional service.
+            <p className="text-base font-[700] text-white drop-shadow-lg">
+              Book your flight to the Himalayas with Himalaya Jet
             </p>
+
+            <div className="group cursor-pointer">
+              <span className="relative inline-block pt-4 pb-2 font-semibold text-white text-lg hover:text-white/80 transition-colors duration-300">
+                Book Now
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+              </span>
+            </div>
           </div>
-          
-          <div className="group cursor-pointer">
-            <span className="relative inline-block px-8 py-4 font-semibold text-white text-lg hover:text-white/80 transition-colors duration-300">
-              Book your flight
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
-              <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out delay-150 group-hover:w-full"></span>
-            </span>
-          </div>
+
+
+
         </div>
       </div>
 
@@ -98,7 +97,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex-1">
                   <div className="text-2xl font-bold text-white">{origin}</div>
-                  <div className="text-sm text-gray-300">Kathmandu</div>
+                  <div className="text-sm text-gray-300"> London</div>
                 </div>
               </div>
             </div>

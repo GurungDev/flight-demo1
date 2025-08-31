@@ -12,8 +12,8 @@ const SwiperComponent = () => {
   return (
     <div className='app-layout py-8 md:py-20'>
       <div className='flex flex-col space-y-6 md:space-y-8'>
-        <div id='title-LifeExp' className='section-header px-4 md:px-0'>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
+        <div id='title-LifeExp' className='section-header px-4  md:px-0'>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-[300] text-white mb-4 md:mb-6 leading-tight">
             Life&apos;s better as a Guest
           </h1>
           <span className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto block px-2 md:px-0">
@@ -21,8 +21,8 @@ const SwiperComponent = () => {
           </span>
         </div>
         
-        <div id='swiper-LifeExp' className='flex flex-col'>
-          <div className="swiper-container">
+        <div id='swiper-LifeExp' className='flex flex-col pt-10  '>
+          <div className="swiper-container ">
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={20}

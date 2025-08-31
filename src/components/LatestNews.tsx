@@ -40,8 +40,8 @@ const newsArticles: NewsArticle[] = [
 const LatestNews: React.FC = () => {
   return (
     <section className="p-4 md:p-6 lg:p-8 mx-auto app-layout">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-1">Latest News</h2>
-      <p className="text-gray-500 mb-4 md:mb-6">Top headlines and breaking news</p>
+      <h2 className="text-2xl md:text-3xl font-[300] mb-1">Latest News</h2  >
+      <p className="text-gray-500 mb-4 md:mb-14">Top headlines and breaking news</p>
 
       {/* Top row with 2 large items */}
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 mb-4 md:mb-6">
@@ -68,9 +68,9 @@ const LatestNews: React.FC = () => {
           </div>
         ))}
       </div>
-      
+
       {/* Bottom row with 3 smaller items */}
-      <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+      {/* <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
         {newsArticles.slice(2, 5).map((article, index) => (
           <div
             key={index + 2}
@@ -92,7 +92,7 @@ const LatestNews: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

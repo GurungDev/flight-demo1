@@ -85,15 +85,10 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="glass border-t border-white/10">
+    <footer className="glass border-t border-white/10 rounded-t-5xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main footer content */}
-        <div className="text-center mb-16 py-16 px-8">
-          <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-bold bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg mb-6">
-            Himalaya Jet
-          </h2>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
-        </div>
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand section */}
           <div className="lg:col-span-2">
@@ -180,6 +175,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      
       </div>
     </footer>
   )

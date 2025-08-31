@@ -90,7 +90,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
         <div className="p-8 max-h-[60vh] overflow-y-auto">
           {currentStep === 1 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">Where are you flying from?</h3>
+              <h3 className="text-xl font-semibold text-gray-900">Where are you flying from?</h3>
               <div className="space-y-4">
                 <div className="relative">
                   <input
@@ -98,7 +98,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                     placeholder="Search for departure city or airport"
                     value={formData.flyingFrom}
                     onChange={(e) => handleInputChange('flyingFrom', e.target.value)}
-                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg text-gray-900 placeholder-gray-500"
                   />
                   <IoLocation className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                 </div>
@@ -107,10 +107,10 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                     <button
                       key={city}
                       onClick={() => handleInputChange('flyingFrom', city)}
-                      className="p-3 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors"
+                      className="p-3 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-gray-900"
                     >
                       <div className="font-medium">{city.split(',')[0]}</div>
-                      <div className="text-sm text-gray-500">{city.split(',')[1]}</div>
+                      <div className="text-sm text-gray-600">{city.split(',')[1]}</div>
                     </button>
                   ))}
                 </div>
@@ -120,7 +120,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
 
           {currentStep === 2 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">Where are you flying to?</h3>
+              <h3 className="text-xl font-semibold text-gray-900">Where are you flying to?</h3>
               <div className="space-y-4">
                 <div className="relative">
                   <input
@@ -128,7 +128,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                     placeholder="Search for destination city or airport"
                     value={formData.flyingTo}
                     onChange={(e) => handleInputChange('flyingTo', e.target.value)}
-                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
+                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg text-gray-900 placeholder-gray-500"
                   />
                   <IoAirplane className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                 </div>
@@ -137,10 +137,10 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                     <button
                       key={city}
                       onClick={() => handleInputChange('flyingTo', city)}
-                      className="p-3 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors"
+                      className="p-3 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-colors text-gray-900"
                     >
                       <div className="font-medium">{city.split(',')[0]}</div>
-                      <div className="text-sm text-gray-500">{city.split(',')[1]}</div>
+                      <div className="text-sm text-gray-600">{city.split(',')[1]}</div>
                     </button>
                   ))}
                 </div>
@@ -150,10 +150,10 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
 
           {currentStep === 3 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">Who&apos;s traveling?</h3>
+              <h3 className="text-xl font-semibold text-gray-900">Who&apos;s traveling?</h3>
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-4">
-                  <h4 className="font-medium text-gray-700">Passengers</h4>
+                  <h4 className="font-medium text-gray-800">Passengers</h4>
                   {[
                     { label: 'Adults', desc: 'Age 12+', field: 'adults', min: 1 },
                     { label: 'Children', desc: 'Age 2-11 years', field: 'children', min: 0 },
@@ -161,20 +161,20 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                   ].map(({ label, desc, field, min }) => (
                     <div key={field} className="flex items-center justify-between">
                       <div>
-                        <div className="font-medium">{label}</div>
-                        <div className="text-sm text-gray-500">{desc}</div>
+                        <div className="font-medium text-gray-900">{label}</div>
+                        <div className="text-sm text-gray-600">{desc}</div>
                       </div>
                       <div className="flex items-center space-x-3">
                         <button
                           onClick={() => handleInputChange(field, Math.max(min, (formData[field as keyof typeof formData] as number) - 1))}
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 text-gray-700"
                         >
                           -
                         </button>
-                        <span className="w-8 text-center font-medium">{formData[field as keyof typeof formData]}</span>
+                        <span className="w-8 text-center font-medium text-gray-900">{formData[field as keyof typeof formData]}</span>
                         <button
                           onClick={() => handleInputChange(field, (formData[field as keyof typeof formData] as number) + 1)}
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 text-gray-700"
                         >
                           +
                         </button>
@@ -183,7 +183,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                   ))}
                 </div>
                 <div className="space-y-4">
-                  <h4 className="font-medium text-gray-700">Cabin Class</h4>
+                  <h4 className="font-medium text-gray-800">Cabin Class</h4>
                   {['Economy', 'Business', 'First'].map((cabin) => (
                     <label key={cabin} className="flex items-center space-x-3 cursor-pointer">
                       <input
@@ -194,7 +194,7 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
                         onChange={(e) => handleInputChange('cabinClass', e.target.value)}
                         className="w-4 h-4 text-blue-600"
                       />
-                      <span className="font-medium">{cabin}</span>
+                      <span className="font-medium text-gray-900">{cabin}</span>
                     </label>
                   ))}
                 </div>
@@ -204,24 +204,24 @@ const FlightSearchModal: React.FC<FlightSearchModalProps> = ({ isOpen, onClose }
 
           {currentStep === 4 && (
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-800">When are you traveling?</h3>
+              <h3 className="text-xl font-semibold text-gray-900">When are you traveling?</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Departure Date</label>
+                  <label className="block text-sm font-medium text-gray-800 mb-2">Departure Date</label>
                   <input
                     type="date"
                     value={formData.departureDate}
                     onChange={(e) => handleInputChange('departureDate', e.target.value)}
-                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
+                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Return Date (Optional)</label>
+                  <label className="block text-sm font-medium text-gray-800 mb-2">Return Date (Optional)</label>
                   <input
                     type="date"
                     value={formData.returnDate}
                     onChange={(e) => handleInputChange('returnDate', e.target.value)}
-                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
+                    className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-gray-900"
                   />
                 </div>
               </div>
