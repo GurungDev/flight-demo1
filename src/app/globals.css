@@ -53,6 +53,7 @@ body::before {
   max-width: 1200px;
 }
 
+ 
 /* Responsive adjustments for app-layout */
 @media (min-width: 640px) {
   .app-layout {
@@ -70,6 +71,7 @@ body::before {
   .app-layout {
     width: 80%;
   }
+ 
 }
 
 /* Professional Card Styling */
