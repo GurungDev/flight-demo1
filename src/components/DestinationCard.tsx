@@ -36,7 +36,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ city, country, price,
         {/* Price and Miles at Bottom */}
         <div className="absolute bottom-4 left-4 text-white">
           <h4 className="font-bold text-lg mb-1"> {city}, {country}</h4>
-          <p className="text-blue-100 text-sm">From {price} or {miles}</p>
+          <p className="text-yellow-100 text-sm">From {price} or {miles}</p>
         </div>
       </div>
     </div>

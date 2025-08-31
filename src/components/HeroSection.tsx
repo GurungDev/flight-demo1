@@ -62,7 +62,7 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Search/Booking Card */}
-      <div className="absolute left-1/2 bottom-[-3rem] transform -translate-x-1/2 z-20 w-[90%] md:w-[80%] lg:w-[70%] glass py-10 px-6">
+      <div className="absolute left-1/2 bottom-[-3rem] transform rounded-2xl -translate-x-1/2 z-20 w-[90%] md:w-[80%] lg:w-[70%] glass py-10 px-6">
         {/* Trip Type Selection */}
         <div className="flex mb-6 bg-white/80 backdrop-blur-xl rounded-full w-[40%] min-w-[400px] border border-white/20 shadow-lg p-1 absolute left-1/2 top-[-15%] transform -translate-x-1/2">
           {['round-trip', 'one-way', 'multi-city'].map((type) => (
@@ -70,8 +70,8 @@ const HeroSection = () => {
               key={type}
               onClick={() => setTripType(type)}
               className={`flex-1 py-2 px-4 rounded-full text-sm font-medium transition-all ${tripType === type
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-gray-800 hover:text-blue-600 hover:bg-white/50'
+                ? 'bg-amber-600 text-white shadow-sm'
+                : 'text-gray-800 hover:text-yellow-600 hover:bg-white/50'
                 }`}
             >
               {type === 'round-trip' ? 'Round trip' :
@@ -85,7 +85,7 @@ const HeroSection = () => {
           {/* Origin Field */}
           <div className="flex-1 w-full">
             <div
-              className="glass-light border border-white/20 rounded-xl p-4 hover:border-blue-300/50 transition-all cursor-pointer"
+              className="glass-light border border-white/20 rounded-xl p-4 hover:border-yellow-400/50 transition-all cursor-pointer"
               onClick={openModal}
             >
               <div className="flex items-center gap-3">
@@ -118,7 +118,7 @@ const HeroSection = () => {
           {/* Destination Field */}
           <div className="flex-1 w-full">
             <div
-              className="glass-light border border-white/20 rounded-xl p-4 hover:border-blue-300/50 transition-all cursor-pointer"
+              className="glass-light border border-white/20 rounded-xl p-4 hover:border-yellow-400/50 transition-all cursor-pointer"
               onClick={openModal}
             >
               <div className="flex items-center gap-3">

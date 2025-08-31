@@ -13,7 +13,7 @@ const ImageComp = () => {
             
             {/* Floating Geometric Shapes */}
             <div className='absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full blur-sm'></div>
-            <div className='absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-md'></div>
+            <div className='absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-md'></div>
             <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-white/5 rounded-full blur-sm'></div>
             
             {/* Content Container */}
